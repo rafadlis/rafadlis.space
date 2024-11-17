@@ -11,7 +11,7 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
 });
 
-export const robotoSerif = Roboto_Serif({
+const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} ${robotoSerif.variable} ${robotoMono.variable} antialiased min-h-dvh`}
+        className={`${roboto.variable} ${robotoSerif.variable} ${robotoMono.variable} antialiased min-h-dvh`}
       >
         <ThemeProvider
           attribute="class"
