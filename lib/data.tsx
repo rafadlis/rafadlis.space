@@ -1,10 +1,15 @@
 import { ReactNode } from "react";
+import { AppWindow } from "@phosphor-icons/react/dist/ssr";
 
 export type Project = {
   id: number;
   name: string;
+  version: string;
   description: ReactNode;
-  category: string;
+  category: {
+    name: string;
+    icon: ReactNode;
+  };
   stack: string[];
   status: string;
 };
@@ -13,6 +18,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "SAPADA",
+    version: "v0.0.0-alpha",
     description: (
       <>
         It is a web app for manage tax administration for government. SAPADA
@@ -21,8 +27,11 @@ export const projects: Project[] = [
         <span className="italic">Regional Tax Administration System</span>
       </>
     ),
-    category: "Category 1",
+    category: {
+      name: "Web App",
+      icon: <AppWindow className="h-4 w-4 text-muted-foreground" />,
+    },
     stack: ["Next.js", "Tailwind CSS", "Shadcn UI"],
-    status: "Completed",
+    status: "In Progress",
   },
 ];
