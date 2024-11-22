@@ -178,7 +178,8 @@ export default function Home() {
           <ProjectTable />
         </CardContent>
         <CardFooter className="text-sm text-muted-foreground">
-          This is a list of projects that I have worked on untill now
+          This not all my projects, just the ones that I&apos;m prepared well
+          enough to show
         </CardFooter>
       </Card>
     </main>
