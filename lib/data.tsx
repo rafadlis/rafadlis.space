@@ -85,7 +85,7 @@ export const projects: Project[] = [
   {
     id: 3,
     name: "rafadlis.space",
-    version: "v0.0.0-alpha",
+    version: "v0.0.0-beta",
     description: "A personal website to showcase my projects and skills.",
     category: {
       name: "Website",
