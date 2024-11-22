@@ -1,5 +1,9 @@
 import { ReactNode } from "react";
-import { AppWindow, Globe } from "@phosphor-icons/react/dist/ssr";
+import {
+  AppWindow,
+  Globe,
+  PlugsConnected,
+} from "@phosphor-icons/react/dist/ssr";
 
 export type ProjectStatus =
   | "completed"
@@ -94,5 +98,29 @@ export const projects: Project[] = [
       { name: "Shadcn UI", purpose: "Component Library" },
     ],
     status: "growing",
+  },
+  {
+    id: 4,
+    name: "epad-api",
+    version: "v1.1.0",
+    description: (
+      <>
+        A RESTful API service for managing e-PAD (
+        <span className="italic">Elektronik Pendataan Daerah</span> or{" "}
+        <span className="italic">Electronic Regional Data Management</span>)
+        application data. Provides endpoints for data retrieval, storage and
+        synchronization between e-PAD client applications.
+      </>
+    ),
+    category: {
+      name: "API Web",
+      icon: <PlugsConnected className="h-4 w-4 text-muted-foreground" />,
+    },
+    stack: [
+      { name: "Next.js 15", version: "15.0.0", purpose: "Framework" },
+      { name: "TypeScript", version: "5.0.0", purpose: "Language" },
+      { name: "Prisma", version: "5.0.0", purpose: "ORM" },
+    ],
+    status: "completed",
   },
 ];
