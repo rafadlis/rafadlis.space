@@ -26,6 +26,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import ProjectTable from "@/components/project-table";
 import SettingsMenu from "@/components/settings-menu";
 
 export default function Home() {
@@ -167,13 +168,15 @@ export default function Home() {
           </CardContent>
         </Card>
       </div>
-      {/* MARK: Projects
       <Card className="row-span-1">
         <CardHeader>
           <CardTitle>Projects</CardTitle>
-          <CardDescription>Coming soon</CardDescription>
+          <CardDescription>The projects that I have worked on</CardDescription>
         </CardHeader>
-      </Card> */}
+        <CardContent>
+          <ProjectTable />
+        </CardContent>
+      </Card>
     </main>
   );
 }
