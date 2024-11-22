@@ -7,6 +7,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { projects } from "@/lib/data";
+import { Badge } from "./ui/badge";
 
 export default function ProjectTable() {
   return (
@@ -24,9 +25,21 @@ export default function ProjectTable() {
         {projects.map((project) => (
           <TableRow key={project.id}>
             <TableCell>{project.name}</TableCell>
-            <TableCell>{project.description}</TableCell>
+            <TableCell>
+              <div className="max-w-prose line-clamp-3">
+                {project.description}
+              </div>
+            </TableCell>
             <TableCell>{project.category}</TableCell>
-            <TableCell>{project.stack.join(", ")}</TableCell>
+            <TableCell>
+              <div className="flex flex-wrap gap-1">
+                {project.stack.map((tech) => (
+                  <Badge key={tech} variant="secondary" className="text-xs">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </TableCell>
             <TableCell>{project.status}</TableCell>
           </TableRow>
         ))}

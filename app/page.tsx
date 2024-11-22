@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -176,6 +177,9 @@ export default function Home() {
         <CardContent>
           <ProjectTable />
         </CardContent>
+        <CardFooter className="text-sm text-muted-foreground">
+          This is a list of projects that I have worked on untill now
+        </CardFooter>
       </Card>
     </main>
   );
