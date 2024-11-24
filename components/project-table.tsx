@@ -13,17 +13,41 @@ import {
   Queue,
   X,
   ArrowCircleUp,
+  Lock,
 } from "@phosphor-icons/react/dist/ssr";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Button } from "./ui/button";
 import { ReactNode } from "react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
 
 // Individual cell components
 const ProjectNameCell = ({ project }: { project: Project }) => (
-  <TableCell>
-    {project.name}
-    <div className="w-fit whitespace-nowrap text-xs text-muted-foreground/70">
+  <TableCell className="group">
+    <div className="flex items-center gap-1.5">
+      {project.name}{" "}
+      {project.isPrivate && (
+        <TooltipProvider delayDuration={0}>
+          <Tooltip>
+            <TooltipTrigger>
+              <Lock
+                weight="bold"
+                className="h-3 w-3 text-muted-foreground/40 group-hover:text-muted-foreground"
+              />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-sm">This project is private</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      )}
+    </div>
+    <div className="w-fit whitespace-nowrap text-xs text-muted-foreground/70 font-mono">
       {project.version}
     </div>
   </TableCell>
@@ -51,8 +75,8 @@ const StackCell = ({ project }: { project: Project }) => (
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" size="sm">
-          {project.stack.length}{" "}
-          <span className="text-muted-foreground/70">libraries</span>
+          <span className="font-mono">{project.stack.length}</span>
+          <span className="text-muted-foreground/70">lib</span>
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[400px]">
@@ -75,7 +99,7 @@ const StackCell = ({ project }: { project: Project }) => (
               {project.stack.map((tech) => (
                 <TableRow key={tech.name}>
                   <TableCell className="font-medium">{tech.name}</TableCell>
-                  <TableCell className="text-muted-foreground">
+                  <TableCell className="text-muted-foreground font-mono">
                     {tech.version || "-"}
                   </TableCell>
                   <TableCell className="text-muted-foreground">

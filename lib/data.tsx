@@ -16,6 +16,7 @@ export type Project = {
   id: number;
   name: string;
   version: string;
+  isPrivate: boolean;
   description: ReactNode;
   category: {
     name: string;
@@ -34,6 +35,7 @@ export const projects: Project[] = [
     id: 1,
     name: "SAPADA",
     version: "v0.0.0-alpha",
+    isPrivate: true,
     description: (
       <>
         A comprehensive web platform for regional tax management and
@@ -60,6 +62,7 @@ export const projects: Project[] = [
     id: 2,
     name: "AWAS",
     version: "v0.0.0-alpha",
+    isPrivate: true,
     description: (
       <>
         A web application for efficient tax supervision and inspection
@@ -85,6 +88,7 @@ export const projects: Project[] = [
     id: 3,
     name: "rafadlis.space",
     version: "v0.0.0-beta",
+    isPrivate: false,
     description: "A personal website to showcase my projects and skills.",
     category: {
       name: "Website",
@@ -102,6 +106,7 @@ export const projects: Project[] = [
     id: 4,
     name: "epad-api",
     version: "v1.1.0",
+    isPrivate: true,
     description: (
       <>
         A robust API service for e-PAD ({""}
