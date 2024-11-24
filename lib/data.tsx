@@ -36,10 +36,10 @@ export const projects: Project[] = [
     version: "v0.0.0-alpha",
     description: (
       <>
-        A web application for managing regional tax administration in
-        government. SAPADA stands for{" "}
-        <span className="italic">Sistem Administrasi Pajak Daerah</span> or{" "}
-        <span className="italic">Regional Tax Administration System</span>
+        A comprehensive web platform for regional tax management and
+        administration. SAPADA ({""}
+        <span className="italic">Regional Tax Administration System</span>)
+        streamlines government tax operations.
       </>
     ),
     category: {
@@ -62,10 +62,9 @@ export const projects: Project[] = [
     version: "v0.0.0-alpha",
     description: (
       <>
-        AWAS stands for{" "}
-        <span className="italic">Administrasi Pengawasan & Pemeriksaan</span> or{" "}
-        <span className="italic">Supervision & Inspection Administration</span>.
-        A web app to streamline tax supervision and inspection processes.
+        A web application for efficient tax supervision and inspection
+        management, streamlining administrative workflows and compliance
+        monitoring.
       </>
     ),
     category: {
@@ -105,11 +104,10 @@ export const projects: Project[] = [
     version: "v1.1.0",
     description: (
       <>
-        A RESTful API service for managing e-PAD (
-        <span className="italic">Elektronik Pendataan Daerah</span> or{" "}
-        <span className="italic">Electronic Regional Data Management</span>)
-        application data. Provides endpoints for data retrieval, storage and
-        synchronization between e-PAD client applications.
+        A robust API service for e-PAD ({""}
+        <span className="italic">Elektronik Pendataan Daerah</span>) data
+        management, enabling seamless data synchronization and integration for
+        government applications.
       </>
     ),
     category: {

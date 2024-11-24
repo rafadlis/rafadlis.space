@@ -30,7 +30,7 @@ const ProjectNameCell = ({ project }: { project: Project }) => (
 );
 
 const DescriptionCell = ({ project }: { project: Project }) => (
-  <TableCell>
+  <TableCell className="max-md:hidden">
     <div className="max-w-prose line-clamp-2 text-muted-foreground">
       {project.description}
     </div>
@@ -47,7 +47,7 @@ const CategoryCell = ({ project }: { project: Project }) => (
 );
 
 const StackCell = ({ project }: { project: Project }) => (
-  <TableCell>
+  <TableCell className="max-sm:hidden">
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" size="sm">
@@ -177,8 +177,8 @@ export default function ProjectTable() {
           <TableHead>Project</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Category</TableHead>
-          <TableHead>Description</TableHead>
-          <TableHead>Stack</TableHead>
+          <TableHead className="max-md:hidden">Description</TableHead>
+          <TableHead className="max-sm:hidden">Stack</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
