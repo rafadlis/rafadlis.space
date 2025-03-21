@@ -22,7 +22,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.0.0-alpha.1",
-    "next": "15.0.4-canary.12",
+    "next": "^15.3.0-canary.17",
     "next-themes": "^0.3.0",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
