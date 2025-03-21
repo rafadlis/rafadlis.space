@@ -68,7 +68,7 @@ export default function Home() {
           </CardContent>
         </Card>
         {/* MARK: About */}
-        <Card className="flex-1 flex-grow flex flex-col justify-between ">
+        <Card className="flex-1 grow flex flex-col justify-between ">
           <CardHeader>
             <CardTitle>About Me</CardTitle>
             <CardDescription>

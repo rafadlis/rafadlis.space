@@ -31,7 +31,7 @@ export default function SettingsMenu() {
           <Button
             size="icon"
             variant="ghost"
-            className="rounded-full shadow-lg bg-secondary-foreground hover:bg-secondary-foreground/80 hover:shadow-sm transition-all duration-200 text-secondary hover:text-secondary border-none"
+            className="rounded-full shadow-lg bg-secondary-foreground hover:bg-secondary-foreground/80 hover:shadow-xs transition-all duration-200 text-secondary hover:text-secondary border-none"
           >
             <GearSix weight="bold" />
           </Button>
