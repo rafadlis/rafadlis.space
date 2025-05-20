@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,6 +12,7 @@ import {
 import { Button } from "./ui/button";
 import { GearSix, Sun, Moon, Translate } from "@phosphor-icons/react/dist/ssr";
 import { useTheme } from "next-themes";
+
 export default function SettingsMenu() {
   const { theme, setTheme } = useTheme();
 
@@ -19,38 +20,52 @@ export default function SettingsMenu() {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  const MotionButton = motion.create(Button);
+  const MotionDropdownMenuItem = motion.create(DropdownMenuItem);
+
   return (
     <motion.div
       className="fixed bottom-4 right-4 z-50"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
+      initial={{ opacity: 0, y: 20, scale: 0.9 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        delay: 0.2,
+      }}
     >
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button
-            size="icon"
-            variant="ghost"
-            className="rounded-full shadow-lg bg-secondary-foreground hover:bg-secondary-foreground/80 hover:shadow-xs transition-all duration-200 text-secondary hover:text-secondary border-none"
-          >
+          <MotionButton size="icon" variant="default">
             <GearSix weight="bold" />
-          </Button>
+          </MotionButton>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        <DropdownMenuContent align="end" className="w-48">
           <DropdownMenuLabel>Settings</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="cursor-pointer" onClick={toggleTheme}>
+          <MotionDropdownMenuItem
+            className="cursor-pointer group flex items-center"
+            onClick={toggleTheme}
+            whileHover={{ x: 2 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
             {theme === "light" ? (
-              <Moon className="mr-1" />
+              <Moon className="group-hover:animate-pulse" />
             ) : (
-              <Sun className="mr-1" />
+              <Sun className="group-hover:animate-pulse" />
             )}
             {theme === "light" ? "Dark Mode" : "Light Mode"}
-          </DropdownMenuItem>
-          <DropdownMenuItem className="cursor-pointer">
-            <Translate className="mr-1" />
+          </MotionDropdownMenuItem>
+          <MotionDropdownMenuItem
+            className="cursor-pointer group flex items-center"
+            onClick={toggleTheme}
+            whileHover={{ x: 2 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <Translate className="group-hover:animate-pulse" />
             Language
-          </DropdownMenuItem>
+          </MotionDropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </motion.div>
