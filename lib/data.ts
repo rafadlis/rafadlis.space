@@ -108,8 +108,8 @@ export const projects: Project[] = [
       { name: "TypeScript", version: "5.0.0", purpose: "Language" },
       { name: "Tailwind CSS", version: "3.0.0", purpose: "Styling" },
       { name: "Shadcn UI", purpose: "Component Library" },
-      { name: "Supabase", purpose: "Backend" },
-      { name: "Prisma", version: "5.0.0", purpose: "ORM" },
+      { name: "Supabase", purpose: "Database, Auth, and Storage" },
+      { name: "Drizzle ORM", version: "0.42.0", purpose: "ORM" },
     ],
     status: "growing",
   },
@@ -135,7 +135,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "epad-api",
-    version: "v1.1.0",
+    version: "v2.0.0",
     isPrivate: true,
     description:
       "A comprehensive RESTful API service for e-PAD (Elektronik Pendataan Daerah), providing secure and efficient data management, real-time synchronization, and seamless integration capabilities for government applications. Built with scalability and performance in mind.",
@@ -144,9 +144,9 @@ export const projects: Project[] = [
       icon: "api-web",
     },
     tech: [
-      { name: "Next.js 15", version: "15.0.0", purpose: "Framework" },
-      { name: "TypeScript", version: "5.0.0", purpose: "Language" },
-      { name: "Prisma", version: "5.0.0", purpose: "ORM" },
+      { name: "Next.js 15", version: "15^", purpose: "Framework" },
+      { name: "TypeScript", version: "5^", purpose: "Language" },
+      { name: "Drizzle ORM", version: "0.42.0", purpose: "ORM" },
     ],
     status: "completed",
   },
