@@ -11,9 +11,13 @@ export type ProjectCategory = "web-app" | "website" | "api-web";
 export type Project = {
   id: number;
   name: string;
-  url?: string;
+  urls?: {
+    prod?: string;
+    demo?: string;
+  };
   version: string;
   isPrivate: boolean;
+  isOpenSource: boolean;
   description: string;
   category: {
     name: string;
@@ -31,9 +35,12 @@ export const projects: Project[] = [
   {
     id: 6,
     name: "tirtakencana.co.id",
-    url: "https://tirtakencana.co.id",
+    urls: {
+      prod: "https://tirtakencana.co.id",
+    },
     version: "-",
     isPrivate: true,
+    isOpenSource: false,
     description:
       "Primary website for Tirtakencana as a hotel and resort company.",
     category: {
@@ -52,9 +59,12 @@ export const projects: Project[] = [
   {
     id: 5,
     name: "app.tirtakencana.co.id",
-    url: "https://app.tirtakencana.co.id",
+    urls: {
+      prod: "https://app.tirtakencana.co.id",
+    },
     version: "v1.0.0",
     isPrivate: true,
+    isOpenSource: false,
     description:
       "A comprehensive Hotel and Resort Management System designed to streamline operations from Front Office to Accounting. Features include reservation management, guest services, room allocation, billing, and financial reporting.",
     category: {
@@ -74,8 +84,13 @@ export const projects: Project[] = [
   {
     id: 4,
     name: "SAPADA",
+    urls: {
+      prod: "https://sapada.bapenda.garutkab.go.id",
+      demo: "https://sapada-dev.rafadlis.space",
+    },
     version: "v0.0.0-alpha",
     isPrivate: true,
+    isOpenSource: false,
     description:
       "SAPADA (Regional Tax Administration System) is a comprehensive web platform designed to modernize and streamline regional tax management. It provides efficient tools for tax collection, administration, and reporting, helping government agencies manage their tax operations more effectively.",
     category: {
@@ -97,6 +112,7 @@ export const projects: Project[] = [
     name: "APEDA",
     version: "v1.0.3",
     isPrivate: true,
+    isOpenSource: false,
     description:
       "APEDA (AP3DA - Aplikasi Pengawasan dan Pemeriksaan Pajak Daerah)  A web application for efficient tax supervision and inspection management, streamlining administrative workflows and compliance monitoring.",
     category: {
@@ -118,6 +134,7 @@ export const projects: Project[] = [
     name: "rafadlis.space",
     version: "v0.0.0-beta",
     isPrivate: false,
+    isOpenSource: true,
     description:
       "A dynamic digital portfolio showcasing my journey as a developer, featuring interactive project demonstrations, technical expertise, and creative solutions that bring ideas to life.",
     category: {
@@ -137,6 +154,7 @@ export const projects: Project[] = [
     name: "epad-api",
     version: "v2.0.0",
     isPrivate: true,
+    isOpenSource: false,
     description:
       "A comprehensive RESTful API service for e-PAD (Elektronik Pendataan Daerah), providing secure and efficient data management, real-time synchronization, and seamless integration capabilities for government applications. Built with scalability and performance in mind.",
     category: {

@@ -14,6 +14,7 @@ import {
   AppWindow,
   Globe,
   PlugsConnected,
+  ArrowSquareOut,
 } from "@phosphor-icons/react/dist/ssr";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Button } from "./ui/button";
@@ -34,6 +35,7 @@ import {
 } from "./ui/table";
 import { createColumnHelper } from "@tanstack/react-table";
 import { useState } from "react";
+import Link from "next/link";
 // Map category types to icons
 const categoryIcons: Record<ProjectCategory, React.ReactNode> = {
   "web-app": <AppWindow className="h-4 w-4 text-muted-foreground" />,
@@ -106,7 +108,61 @@ export const columns = [
       return (
         <div className="group">
           <div className="flex items-center gap-1.5">
-            {project.name}{" "}
+            {project.urls?.demo && project.urls.prod ? (
+              <Popover>
+                <PopoverTrigger className="cursor-pointer">
+                  {project.name}
+                </PopoverTrigger>
+                <PopoverContent
+                  className="text-sm space-y-3"
+                  side="right"
+                  align="start"
+                  alignOffset={-10}
+                >
+                  <div className="relative border border-border/50 rounded-md py-3 px-4 flex items-center gap-2 group hover:bg-muted/50 transition-colors duration-200">
+                    <div>
+                      <p>Production URL</p>
+                      <p className="text-muted-foreground">
+                        see the real project in production
+                      </p>
+                    </div>
+                    <ArrowSquareOut className="shrink-0 text-muted-foreground group-hover:text-foreground group-hover:animate-pulse" />
+                    <Link
+                      href={project.urls.prod}
+                      target="_blank"
+                      className="absolute inset-0"
+                    />
+                  </div>
+                  <div className="relative border border-border/50 rounded-md py-3 px-4 flex items-center gap-2 group hover:bg-muted/50 transition-colors duration-200">
+                    <div>
+                      <p>Demo URL</p>
+                      <p className="text-muted-foreground">
+                        see the project in action and you can explore freely to
+                        do some testing like Create, Read, Update, and Delete
+                        (CRUD) to the app
+                      </p>
+                    </div>
+                    <ArrowSquareOut className="shrink-0 text-muted-foreground group-hover:text-foreground group-hover:animate-pulse" />
+                    <Link
+                      href={project.urls.demo}
+                      target="_blank"
+                      className="absolute inset-0"
+                    />
+                  </div>
+                </PopoverContent>
+              </Popover>
+            ) : (
+              <Link
+                href={project.urls?.prod || project.urls?.demo || ""}
+                target={
+                  project.urls?.prod || project.urls?.demo
+                    ? "_blank"
+                    : undefined
+                }
+              >
+                {project.name}
+              </Link>
+            )}
             {project.isPrivate && (
               <TooltipProvider delayDuration={0}>
                 <Tooltip>
