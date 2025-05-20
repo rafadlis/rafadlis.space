@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Serif, Roboto_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-providers";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const robotoMono = Roboto_Mono({
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${roboto.variable} ${robotoSerif.variable} ${robotoMono.variable} antialiased min-h-dvh selection:bg-primary selection:text-primary-foreground`}
       >
