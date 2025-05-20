@@ -63,7 +63,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center gap-2 px-6">
               <Atom className="text-3xl" weight="light" />
-              <p className="text-sm text-center">Web App Developer</p>
+              <p className="text-sm text-center">App Developer</p>
             </div>
           </CardContent>
         </Card>
