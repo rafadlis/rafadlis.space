@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="h-dvh p-4 flex flex-col gap-4 relative">
       <SettingsMenu />
-      <div className="flex flex-wrap gap-4 mx-auto">
+      <div className="w-full flex flex-wrap gap-4 mx-auto">
         {/* MARK: Profile */}
         <Card className="flex-1 sm:grow-0 relative">
           <Avatar className="absolute top-6 left-6">
