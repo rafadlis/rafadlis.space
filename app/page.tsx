@@ -27,7 +27,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import ProjectTable from "@/components/project-table";
+import { ProjectTable } from "@/components/project-table";
 import SettingsMenu from "@/components/settings-menu";
 
 export default function Home() {
