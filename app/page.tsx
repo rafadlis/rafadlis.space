@@ -32,7 +32,7 @@ import SettingsMenu from "@/components/settings-menu";
 
 export default function Home() {
   return (
-    <main className="h-dvh p-4 flex flex-col gap-4 relative">
+    <main className="min-h-dvh p-4 flex flex-col gap-4 relative">
       <SettingsMenu />
       <div className="w-full flex flex-wrap gap-4 mx-auto">
         {/* MARK: Profile */}
