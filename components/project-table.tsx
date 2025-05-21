@@ -17,13 +17,25 @@ import {
 
 import { projects } from "@/lib/data";
 import { columns } from "./project-table-columns";
+import { useEffect, useState } from "react";
+import { ProjectTableSkeleton } from "./project-table-skeleton";
 
 export function ProjectTable() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const table = useReactTable({
     data: projects,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
+
+  if (!isMounted) {
+    return <ProjectTableSkeleton />;
+  }
 
   return (
     <div className="rounded-md border">

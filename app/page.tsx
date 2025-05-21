@@ -136,7 +136,7 @@ export default function Home() {
           </CardContent>
         </Card>
         {/* MARK: Social */}
-        <Card className="shrink-0">
+        <Card className="shrink-0 max-md:flex-1">
           <CardHeader>
             <CardTitle>Social</CardTitle>
             <CardDescription>Connect with me</CardDescription>
