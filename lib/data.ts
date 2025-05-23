@@ -39,7 +39,7 @@ export const projects: Project[] = [
       prod: "https://tirtakencana.co.id",
     },
     version: "-",
-    isPrivate: true,
+    isPrivate: false,
     isOpenSource: false,
     description:
       "Primary website for Tirtakencana as a hotel and resort company.",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
       prod: "https://app.tirtakencana.co.id",
     },
     version: "v1.0.0",
-    isPrivate: true,
+    isPrivate: false,
     isOpenSource: false,
     description:
       "A comprehensive Hotel and Resort Management System designed to streamline operations from Front Office to Accounting. Features include reservation management, guest services, room allocation, billing, and financial reporting.",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       demo: "https://sapada-dev.rafadlis.space",
     },
     version: "v0.0.0-alpha",
-    isPrivate: true,
+    isPrivate: false,
     isOpenSource: false,
     description:
       "SAPADA (Regional Tax Administration System) is a comprehensive web platform designed to modernize and streamline regional tax management. It provides efficient tools for tax collection, administration, and reporting, helping government agencies manage their tax operations more effectively.",
