@@ -61,6 +61,7 @@ export const projects: Project[] = [
     name: "app.tirtakencana.co.id",
     urls: {
       prod: "https://app.tirtakencana.co.id",
+      demo: "https://hrms-demo.rafadlis.space",
     },
     version: "v1.0.0",
     isPrivate: false,
