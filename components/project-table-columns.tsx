@@ -310,7 +310,7 @@ export const columns = [
         <div className="max-sm:hidden">
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="cursor-pointer">
                 <span className="font-mono">{project.tech.length}</span>
               </Button>
             </PopoverTrigger>
