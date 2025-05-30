@@ -38,7 +38,7 @@ export const projects: Project[] = [
     urls: {
       prod: "https://tirtakencana.co.id",
     },
-    version: "-",
+    version: "0.1.0",
     isPrivate: false,
     isOpenSource: false,
     description:
@@ -54,7 +54,7 @@ export const projects: Project[] = [
       { name: "Tailwind CSS", version: "4^", purpose: "Styling" },
       { name: "Shadcn UI", purpose: "Component Library" },
     ],
-    status: "planned",
+    status: "in-progress",
   },
   {
     id: 5,
