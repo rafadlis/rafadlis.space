@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/hover-card"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
+import Link from "next/link"
 
 const categoryIcons: Record<BlogCategory, React.ReactNode> = {
   "App Development": <Code className="h-4 w-4 text-muted-foreground" />,
@@ -74,7 +75,14 @@ export const useBlogTableColumns = () => {
         header: "Title",
         cell: ({ row }) => {
           const blog = row.original
-          return <p className="font-medium">{blog.title}</p>
+          return (
+            <Link
+              href={`/blog/${blog.slug}`}
+              className="font-medium hover:underline"
+            >
+              {blog.title}
+            </Link>
+          )
         },
       }),
       columnHelper.accessor("category", {
