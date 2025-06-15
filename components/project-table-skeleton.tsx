@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton"
 import {
   Table,
   TableBody,
@@ -6,11 +6,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/table"
 
 export function ProjectTableSkeleton() {
-  const skeletonRows = Array(5).fill(0); // Adjust row count as needed
-  const headers = ["Project", "Status", "Category", "Year"]; // Define headers
+  const skeletonRows = Array(5).fill(0) // Adjust row count as needed
+  const headers = ["Project", "Status", "Category", "Year"] // Define headers
 
   return (
     <div className="rounded-md border">
@@ -37,5 +37,5 @@ export function ProjectTableSkeleton() {
         </TableBody>
       </Table>
     </div>
-  );
+  )
 }

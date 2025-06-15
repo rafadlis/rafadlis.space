@@ -4,32 +4,32 @@ export type ProjectStatus =
   | "in-progress"
   | "planned"
   | "dropped"
-  | "growing";
+  | "growing"
 
-export type ProjectCategory = "web-app" | "website" | "api-web";
+export type ProjectCategory = "web-app" | "website" | "api-web"
 
 export type Project = {
-  id: number;
-  name: string;
+  id: number
+  name: string
   urls?: {
-    prod?: string;
-    demo?: string;
-  };
-  version: string;
-  isPrivate: boolean;
-  isOpenSource: boolean;
-  description: string;
+    prod?: string
+    demo?: string
+  }
+  version: string
+  isPrivate: boolean
+  isOpenSource: boolean
+  description: string
   category: {
-    name: string;
-    icon: ProjectCategory;
-  };
+    name: string
+    icon: ProjectCategory
+  }
   tech: Array<{
-    name: string;
-    version?: string;
-    purpose?: string;
-  }>;
-  status: ProjectStatus;
-};
+    name: string
+    version?: string
+    purpose?: string
+  }>
+  status: ProjectStatus
+}
 
 export const projects: Project[] = [
   {
@@ -169,4 +169,4 @@ export const projects: Project[] = [
     ],
     status: "completed",
   },
-];
+]

@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { Project, ProjectStatus, ProjectCategory } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { Project, ProjectStatus, ProjectCategory } from "@/lib/data"
+import { cn } from "@/lib/utils"
 import {
   CheckCircle,
   CircleNotch,
@@ -15,16 +15,16 @@ import {
   Globe,
   PlugsConnected,
   ArrowSquareOut,
-} from "@phosphor-icons/react/dist/ssr";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { Button } from "./ui/button";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+} from "@phosphor-icons/react/dist/ssr"
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover"
+import { Button } from "./ui/button"
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
+} from "./ui/tooltip"
 import {
   Table,
   TableBody,
@@ -32,21 +32,21 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/table";
-import { createColumnHelper } from "@tanstack/react-table";
-import { useState } from "react";
-import Link from "next/link";
+} from "./ui/table"
+import { createColumnHelper } from "@tanstack/react-table"
+import { useState } from "react"
+import Link from "next/link"
 // Map category types to icons
 const categoryIcons: Record<ProjectCategory, React.ReactNode> = {
   "web-app": <AppWindow className="h-4 w-4 text-muted-foreground" />,
   website: <Globe className="h-4 w-4 text-muted-foreground" />,
   "api-web": <PlugsConnected className="h-4 w-4 text-muted-foreground" />,
-};
+}
 
 // Status configuration with icons and styling
 const statusConfigs: Record<
   ProjectStatus,
-  { icon: React.ReactNode; text: string; classes: string; description: string }
+  { icon: React.ReactNode text: string classes: string description: string }
 > = {
   completed: {
     icon: <CheckCircle weight="fill" className="h-3.5 w-3.5 text-success" />,
@@ -85,7 +85,7 @@ const statusConfigs: Record<
     description:
       "Project is completed but continues to receive updates and improvements",
   },
-};
+}
 
 // Status priority for sorting
 const statusOrder: Record<ProjectStatus, number> = {
@@ -94,17 +94,17 @@ const statusOrder: Record<ProjectStatus, number> = {
   completed: 3,
   planned: 4,
   dropped: 5,
-};
+}
 
 // Create a column helper for type safety
-const columnHelper = createColumnHelper<Project>();
+const columnHelper = createColumnHelper<Project>()
 
 // Column definitions using the column helper
 export const columns = [
   columnHelper.accessor("name", {
     header: "Project",
     cell: ({ row }) => {
-      const project = row.original;
+      const project = row.original
       return (
         <div className="group">
           <div className="flex items-center gap-1.5">
@@ -183,7 +183,7 @@ export const columns = [
             {project.version}
           </div>
         </div>
-      );
+      )
     },
     enableSorting: true,
   }),
@@ -202,11 +202,11 @@ export const columns = [
             <CaretDown className="ml-2 h-4 w-4" />
           ) : null}
         </Button>
-      );
+      )
     },
     cell: ({ row }) => {
-      const status = row.getValue("status") as ProjectStatus;
-      const config = statusConfigs[status];
+      const status = row.getValue("status") as ProjectStatus
+      const config = statusConfigs[status]
 
       return (
         <HoverCard openDelay={50} closeDelay={50}>
@@ -226,13 +226,13 @@ export const columns = [
             <p className="text-sm">{config.description}</p>
           </HoverCardContent>
         </HoverCard>
-      );
+      )
     },
     sortingFn: (rowA, rowB, columnId) => {
-      const statusA = rowA.getValue(columnId) as ProjectStatus;
-      const statusB = rowB.getValue(columnId) as ProjectStatus;
+      const statusA = rowA.getValue(columnId) as ProjectStatus
+      const statusB = rowB.getValue(columnId) as ProjectStatus
 
-      return statusOrder[statusA] - statusOrder[statusB];
+      return statusOrder[statusA] - statusOrder[statusB]
     },
   }),
   columnHelper.accessor("category", {
@@ -250,21 +250,21 @@ export const columns = [
             <CaretDown className="ml-2 h-4 w-4" />
           ) : null}
         </Button>
-      );
+      )
     },
     cell: ({ row }) => {
-      const category = row.original.category;
+      const category = row.original.category
       return (
         <div className="flex items-center gap-1.5 w-fit whitespace-nowrap">
           {categoryIcons[category.icon as ProjectCategory]}
           {category.name}
         </div>
-      );
+      )
     },
     sortingFn: (rowA, rowB) => {
-      const categoryA = rowA.original.category.name;
-      const categoryB = rowB.original.category.name;
-      return categoryA.localeCompare(categoryB);
+      const categoryA = rowA.original.category.name
+      const categoryB = rowB.original.category.name
+      return categoryA.localeCompare(categoryB)
     },
   }),
   columnHelper.accessor("description", {
@@ -282,11 +282,11 @@ export const columns = [
             <CaretDown className="ml-2 h-4 w-4" />
           ) : null}
         </Button>
-      );
+      )
     },
     cell: ({ row }) => {
       function Component() {
-        const [expanded, setExpanded] = useState(false);
+        const [expanded, setExpanded] = useState(false)
         return (
           <div
             className={cn(
@@ -297,15 +297,15 @@ export const columns = [
           >
             {row.original.description}
           </div>
-        );
+        )
       }
-      return <Component />;
+      return <Component />
     },
   }),
   columnHelper.accessor("tech", {
     header: "Tech",
     cell: ({ row }) => {
-      const project = row.original;
+      const project = row.original
       return (
         <div className="max-sm:hidden">
           <Popover>
@@ -350,10 +350,10 @@ export const columns = [
             </PopoverContent>
           </Popover>
         </div>
-      );
+      )
     },
     sortingFn: (rowA, rowB) => {
-      return rowA.original.tech.length - rowB.original.tech.length;
+      return rowA.original.tech.length - rowB.original.tech.length
     },
   }),
-];
+]

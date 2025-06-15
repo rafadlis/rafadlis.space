@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { motion } from "motion/react";
+import { motion } from "motion/react"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,20 +8,20 @@ import {
   DropdownMenuTrigger,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "./ui/button";
-import { GearSix, Sun, Moon, Translate } from "@phosphor-icons/react/dist/ssr";
-import { useTheme } from "next-themes";
+} from "@/components/ui/dropdown-menu"
+import { Button } from "./ui/button"
+import { GearSix, Sun, Moon, Translate } from "@phosphor-icons/react/dist/ssr"
+import { useTheme } from "next-themes"
 
 export default function SettingsMenu() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+    setTheme(theme === "light" ? "dark" : "light")
+  }
 
-  const MotionButton = motion.create(Button);
-  const MotionDropdownMenuItem = motion.create(DropdownMenuItem);
+  const MotionButton = motion.create(Button)
+  const MotionDropdownMenuItem = motion.create(DropdownMenuItem)
 
   return (
     <motion.div
@@ -69,5 +69,5 @@ export default function SettingsMenu() {
         </DropdownMenuContent>
       </DropdownMenu>
     </motion.div>
-  );
+  )
 }

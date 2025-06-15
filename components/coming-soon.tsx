@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { ArrowLeft, RocketLaunch } from "@phosphor-icons/react/dist/ssr";
-import React from "react";
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
+import { ArrowLeft, RocketLaunch } from "@phosphor-icons/react/dist/ssr"
+import React from "react"
+import { useRouter } from "next/navigation"
+import { Button } from "@/components/ui/button"
 
 export function ComingSoon(): React.JSX.Element {
-  const router = useRouter();
+  const router = useRouter()
 
   const handleGoBack = () => {
-    router.back();
-  };
+    router.back()
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
@@ -29,5 +29,5 @@ export function ComingSoon(): React.JSX.Element {
         Go Back
       </Button>
     </div>
-  );
+  )
 }

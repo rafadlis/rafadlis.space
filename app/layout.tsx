@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { Roboto, Roboto_Serif, Roboto_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
+import type { Metadata } from "next"
+import { Roboto, Roboto_Serif, Roboto_Mono } from "next/font/google"
+import { ThemeProvider } from "@/components/theme-provider"
+import "./globals.css"
+import { Analytics } from "@vercel/analytics/next"
 
 const robotoMono = Roboto_Mono({
   subsets: ["latin"],
@@ -10,7 +10,7 @@ const robotoMono = Roboto_Mono({
   style: ["normal", "italic"],
   display: "swap",
   variable: "--font-roboto-mono",
-});
+})
 
 const robotoSerif = Roboto_Serif({
   subsets: ["latin"],
@@ -18,7 +18,7 @@ const robotoSerif = Roboto_Serif({
   style: ["normal", "italic"],
   display: "swap",
   variable: "--font-roboto-serif",
-});
+})
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,17 +26,17 @@ const roboto = Roboto({
   style: ["normal", "italic"],
   display: "swap",
   variable: "--font-roboto",
-});
+})
 
 export const metadata: Metadata = {
   title: "Rafadlis | Crafter",
   description: "Personal Website",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -54,5 +54,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

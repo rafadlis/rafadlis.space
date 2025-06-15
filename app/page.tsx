@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 import {
   Card,
   CardContent,
@@ -6,9 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   GithubLogo,
   InstagramLogo,
@@ -20,15 +20,15 @@ import {
   Lightning,
   Smiley,
   Devices,
-} from "@phosphor-icons/react/dist/ssr";
-import { Badge } from "@/components/ui/badge";
+} from "@phosphor-icons/react/dist/ssr"
+import { Badge } from "@/components/ui/badge"
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import { ProjectTable } from "@/components/project-table";
-import SettingsMenu from "@/components/settings-menu";
+} from "@/components/ui/hover-card"
+import { ProjectTable } from "@/components/project-table"
+import SettingsMenu from "@/components/settings-menu"
 
 export default function Home() {
   return (
@@ -73,11 +73,10 @@ export default function Home() {
             <CardTitle>About Me</CardTitle>
             <CardDescription>
               <p className="line-clamp-4">
-                I&apos;m a passionate web developer dedicated to crafting
-                elegant and efficient digital solutions. With a keen eye for
-                detail and a problem-solving mindset, I transform complex
-                challenges into seamless user experiences. Here&apos;s what
-                drives me:
+                I&aposm a passionate web developer dedicated to crafting elegant
+                and efficient digital solutions. With a keen eye for detail and
+                a problem-solving mindset, I transform complex challenges into
+                seamless user experiences. Here&aposs what drives me:
               </p>
             </CardDescription>
           </CardHeader>
@@ -178,10 +177,10 @@ export default function Home() {
           <ProjectTable />
         </CardContent>
         <CardFooter className="text-sm text-muted-foreground">
-          This not all my projects, just the ones that I&apos;m prepared well
+          This not all my projects, just the ones that I&aposm prepared well
           enough to show
         </CardFooter>
       </Card>
     </main>
-  );
+  )
 }

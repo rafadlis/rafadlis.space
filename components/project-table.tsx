@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
 import {
   flexRender,
   getCoreRowModel,
   useReactTable,
-} from "@tanstack/react-table";
+} from "@tanstack/react-table"
 
 import {
   Table,
@@ -13,28 +13,28 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/table"
 
-import { projects } from "@/lib/data";
-import { columns } from "./project-table-columns";
-import { useEffect, useState } from "react";
-import { ProjectTableSkeleton } from "./project-table-skeleton";
+import { projects } from "@/lib/data"
+import { columns } from "./project-table-columns"
+import { useEffect, useState } from "react"
+import { ProjectTableSkeleton } from "./project-table-skeleton"
 
 export function ProjectTable() {
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    setIsMounted(true)
+  }, [])
 
   const table = useReactTable({
     data: projects,
     columns,
     getCoreRowModel: getCoreRowModel(),
-  });
+  })
 
   if (!isMounted) {
-    return <ProjectTableSkeleton />;
+    return <ProjectTableSkeleton />
   }
 
   return (
@@ -53,7 +53,7 @@ export function ProjectTable() {
                           header.getContext()
                         )}
                   </TableHead>
-                );
+                )
               })}
             </TableRow>
           ))}
@@ -82,5 +82,5 @@ export function ProjectTable() {
         </TableBody>
       </Table>
     </div>
-  );
+  )
 }
