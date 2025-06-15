@@ -14,14 +14,20 @@ import { Button } from "@/components/ui/button"
 
 function Blog({ className, ...props }: React.ComponentProps<"article">) {
   return (
-    <article className={cn("mx-auto max-w-3xl py-12", className)} {...props} />
+    <article
+      className={cn(
+        "mx-auto w-full max-w-prose px-4 py-8 sm:px-6 sm:py-12",
+        className
+      )}
+      {...props}
+    />
   )
 }
 
 function BlogHeader({ className, ...props }: React.ComponentProps<"header">) {
   return (
     <header
-      className={cn("mb-8 flex flex-col items-start gap-8", className)}
+      className={cn("mb-8 flex flex-col items-start gap-6", className)}
       {...props}
     />
   )
@@ -50,7 +56,7 @@ function BlogTitle({ className, ...props }: React.ComponentProps<"h1">) {
   return (
     <h1
       className={cn(
-        "text-5xl font-extrabold leading-tight tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl",
+        "text-4xl font-extrabold leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl",
         className
       )}
       {...props}
@@ -96,7 +102,7 @@ function BlogAuthors({
   return (
     <div className={cn("flex w-full flex-col gap-4", className)}>
       <p className="text-sm text-muted-foreground">Contributors:</p>
-      <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-4 sm:gap-x-6">
         {Object.entries(authorsByRole).map(([role, roleAuthors]) => (
           <div key={role} className="flex items-center gap-3">
             <div className="flex -space-x-4 rtl:space-x-reverse">
