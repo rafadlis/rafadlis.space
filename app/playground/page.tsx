@@ -1,6 +1,5 @@
 import { RDotIcon } from "@/components/r-dot-icon"
 import RDotIconLoading from "@/components/r-dot-icon-loading"
-import { LoadingPage } from "@/components/loading-page"
 
 export default function Playground() {
   return (
