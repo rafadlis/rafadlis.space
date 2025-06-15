@@ -109,23 +109,15 @@ function BlogAuthors({
               {roleAuthors.map((author) => (
                 <Popover key={author.name}>
                   <PopoverTrigger asChild>
-                    <Link
-                      href={author.url || "/"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={author.name}
-                      className="focus-visible:outline-none"
-                    >
-                      <Avatar className="size-10 border-2 border-background ring-1 ring-border transition-transform hover:-translate-y-0.5">
-                        <AvatarImage alt={author.name} src={author.image} />
-                        <AvatarFallback>
-                          {author.name
-                            .split(" ")
-                            .map((chunk) => chunk[0])
-                            .join("")}
-                        </AvatarFallback>
-                      </Avatar>
-                    </Link>
+                    <Avatar className="size-10 border-2 border-background ring-1 ring-border transition-transform hover:-translate-y-0.5">
+                      <AvatarImage alt={author.name} src={author.image} />
+                      <AvatarFallback>
+                        {author.name
+                          .split(" ")
+                          .map((chunk) => chunk[0])
+                          .join("")}
+                      </AvatarFallback>
+                    </Avatar>
                   </PopoverTrigger>
                   <PopoverContent className="w-80">
                     <div className="flex justify-between space-x-4">
