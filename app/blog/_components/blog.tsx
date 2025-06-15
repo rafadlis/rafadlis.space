@@ -2,6 +2,8 @@ import * as React from "react"
 import Link from "next/link"
 import { ArrowLeft } from "@phosphor-icons/react/dist/ssr"
 import { type PostAuthor } from "@/lib/authors"
+import { type Blog as BlogType } from "@/lib/data-blog"
+import { format } from "date-fns"
 
 import { cn } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -64,12 +66,17 @@ function BlogTitle({ className, ...props }: React.ComponentProps<"h1">) {
   )
 }
 
-function BlogMeta({ className, ...props }: React.ComponentProps<"div">) {
+function BlogMeta({
+  date,
+  className,
+  ...props
+}: React.ComponentProps<"div"> & { date: BlogType["publishedAt"] }) {
   return (
-    <div
-      className={cn("text-sm text-muted-foreground", className)}
-      {...props}
-    />
+    <div className={cn("text-sm text-muted-foreground", className)} {...props}>
+      <time dateTime={format(date, "yyyy-MM-dd")}>
+        {format(date, "EEEE, MMMM d, yyyy")}
+      </time>
+    </div>
   )
 }
 
