@@ -1,3 +1,5 @@
+import { blogs } from "@/lib/data-blog"
+
 export default async function Page({
   params,
 }: {
@@ -9,5 +11,7 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  return [{ slug: "welcome" }]
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }))
 }
