@@ -9,17 +9,22 @@ import {
   BlogTitle,
 } from "../_components/blog"
 import { authors } from "@/lib/authors"
+import { blogs } from "@/lib/data-blog"
 
 export default function Welcome() {
   const postAuthors = [{ ...authors["rafadlis"], role: "Writer" }]
+  const post = blogs.find((blog) => blog.slug === "welcome")
+
+  if (!post) {
+    return null
+  }
+
   return (
     <Blog>
       <BlogHeader>
         <BlogBackLink href="/blog">Back to Blog</BlogBackLink>
-        <BlogMeta>
-          <time dateTime="2024-06-08">Saturday, June 8 2024</time>
-        </BlogMeta>
-        <BlogTitle>Welcome to My Pool of Thought</BlogTitle>
+        <BlogMeta date={post.publishedAt} />
+        <BlogTitle>{post.title}</BlogTitle>
         <BlogAuthors authors={postAuthors} />
       </BlogHeader>
       <BlogContent>
