@@ -46,7 +46,7 @@ const categoryIcons: Record<ProjectCategory, React.ReactNode> = {
 // Status configuration with icons and styling
 const statusConfigs: Record<
   ProjectStatus,
-  { icon: React.ReactNode text: string classes: string description: string }
+  { icon: React.ReactNode; text: string; classes: string; description: string }
 > = {
   completed: {
     icon: <CheckCircle weight="fill" className="h-3.5 w-3.5 text-success" />,
