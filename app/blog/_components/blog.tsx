@@ -193,7 +193,10 @@ function BlogContent({ className, ...props }: React.ComponentProps<"main">) {
 function BlogParagraph({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn(
+        "leading-7 [&:not(:first-child)]:mt-6 text-justify",
+        className
+      )}
       {...props}
     />
   )
