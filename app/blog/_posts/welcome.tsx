@@ -19,7 +19,7 @@ export default function Welcome() {
         <BlogMeta>
           <time dateTime="2024-06-08">Saturday, June 8 2024</time>
         </BlogMeta>
-        <BlogTitle>Welcome to My Digital Garden</BlogTitle>
+        <BlogTitle>Welcome to My Pool of Thought</BlogTitle>
         <BlogAuthors authors={postAuthors} />
       </BlogHeader>
       <BlogContent>
@@ -31,19 +31,24 @@ export default function Welcome() {
         </BlogParagraph>
         <BlogParagraph>
           Here, you&apos;ll find a collection of my explorations and learnings
-          in the vast world of technology and design. I&apos;m driven by the
-          core principles of creating applications that are fast, useful, and
+          not only in the vast world of technology and design but also in data
+          science, statistics, accounting, and tax. I&apos;m driven by the core
+          principles of creating applications that are fast, useful, and
           responsive, and I&apos;m excited to dive deeper into these topics and
           share what I uncover.
         </BlogParagraph>
         <BlogParagraph>
-          Think of this blog as my digital garden—a place where ideas are
-          planted, nurtured, and allowed to grow. It&apos;s where I&apos;ll be
-          documenting my process, sharing insights, and hopefully, connecting
-          with other curious minds. Whether you&apos;re a fellow developer, a
-          designer, or just someone passionate about technology, I hope you find
-          something that sparks your interest and adds a little value to your
-          day.
+          You&apos;ll find posts in both English and Indonesian, as I aim to
+          share my thoughts with a diverse audience.
+        </BlogParagraph>
+        <BlogParagraph>
+          Think of this blog as my pool of thought—a place where ideas can
+          surface, be explored, and connect in new ways. It&apos;s where
+          I&apos;ll be documenting my process, sharing insights, and hopefully,
+          connecting with other curious minds. Whether you&apos;re a fellow
+          developer, a designer, a data enthusiast, or just someone passionate
+          about learning, I hope you find something that sparks your interest
+          and adds a little value to your day.
         </BlogParagraph>
         <BlogParagraph>
           Thank you for stopping by. I&apos;m genuinely glad you&apos;re here.
