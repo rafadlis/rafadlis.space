@@ -84,7 +84,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    name: "SAPADA",
+    name: "sapada.bapenda.garutkab.go.id",
     urls: {
       prod: "https://sapada.bapenda.garutkab.go.id",
       demo: "https://sapada-dev.rafadlis.space",
@@ -152,7 +152,7 @@ export const projects: Project[] = [
   },
   {
     id: 1,
-    name: "epad-api",
+    name: "EPAD API",
     version: "v2.0.0",
     isPrivate: true,
     isOpenSource: false,
