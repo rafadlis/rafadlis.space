@@ -240,7 +240,7 @@ export default function Home() {
           <ProjectTable />
         </CardContent>
         <CardFooter className="text-sm text-muted-foreground">
-          This not all my projects, just the ones that I&aposm prepared well
+          This not all my projects, just the ones that I&apos;m prepared well
           enough to show
         </CardFooter>
       </Card>
