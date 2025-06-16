@@ -121,6 +121,7 @@ function BlogAuthors({
                       <AvatarFallback>
                         {author.name
                           .split(" ")
+                          .slice(0, 2)
                           .map((chunk) => chunk[0])
                           .join("")}
                       </AvatarFallback>
@@ -152,7 +153,7 @@ function BlogAuthors({
                                   className="size-8"
                                   asChild
                                 >
-                                  <a
+                                  <Link
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -161,7 +162,7 @@ function BlogAuthors({
                                       className="size-5"
                                       aria-label={social.name}
                                     />
-                                  </a>
+                                  </Link>
                                 </Button>
                               ))}
                             </div>
