@@ -33,6 +33,29 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 7,
+    name: "mauscan.online",
+    version: "v0.0.0-alpha",
+    isPrivate: false,
+    isOpenSource: false,
+    description:
+      "A powerful API for scanning and managing specific documents like Identity Cards, featuring reliable AI-powered OCR for a cost-effective and streamlined workflow. It is complemented by a web application for easy access and integration.",
+    category: {
+      name: "Web App",
+      icon: "web-app",
+    },
+    tech: [
+      { name: "Next.js 15", version: "15^", purpose: "Framework" },
+      { name: "TypeScript", version: "5^", purpose: "Language" },
+      { name: "Tailwind CSS", version: "4^", purpose: "Styling" },
+      { name: "Shadcn UI", purpose: "Component Library" },
+      { name: "Supabase", purpose: "Database, Auth, and Storage" },
+      { name: "Drizzle ORM", version: "0.42.0", purpose: "ORM" },
+      { name: "Tanstack Query", version: "5^", purpose: "Data Fetching" },
+    ],
+    status: "in-progress",
+  },
+  {
     id: 6,
     name: "tirtakencana.co.id",
     urls: {
@@ -51,6 +74,7 @@ export const projects: Project[] = [
       { name: "Next.js 15", version: "15^", purpose: "Framework" },
       { name: "TypeScript", version: "5^", purpose: "Language" },
       { name: "Motion", version: "-", purpose: "Animation" },
+      { name: "animejs", version: "4^", purpose: "Advance Animation" },
       { name: "Tailwind CSS", version: "4^", purpose: "Styling" },
       { name: "Shadcn UI", purpose: "Component Library" },
     ],
@@ -75,10 +99,12 @@ export const projects: Project[] = [
     tech: [
       { name: "Next.js 15", version: "15^", purpose: "Framework" },
       { name: "TypeScript", version: "5^", purpose: "Language" },
+      { name: "Anime JS", version: "4^", purpose: "Advance Animation" },
       { name: "Tailwind CSS", version: "4^", purpose: "Styling" },
       { name: "Shadcn UI", purpose: "Component Library" },
       { name: "Supabase", purpose: "Database, Auth, and Storage" },
       { name: "Drizzle ORM", version: "0.42.0", purpose: "ORM" },
+      { name: "Tanstack Query", version: "5^", purpose: "Data Fetching" },
     ],
     status: "growing",
   },
@@ -103,8 +129,9 @@ export const projects: Project[] = [
       { name: "TypeScript", version: "5.0.0", purpose: "Language" },
       { name: "Tailwind CSS", version: "3.0.0", purpose: "Styling" },
       { name: "Shadcn UI", purpose: "Component Library" },
-      { name: "Supabase", purpose: "Backend" },
-      { name: "Prisma", version: "5.0.0", purpose: "ORM" },
+      { name: "Supabase", purpose: "Database, Auth, and Storage" },
+      { name: "Drizzle ORM", version: "0.42.0", purpose: "ORM" },
+      { name: "Tanstack Query", version: "5^", purpose: "Data Fetching" },
     ],
     status: "in-progress",
   },
