@@ -1,6 +1,7 @@
 import Link from "next/link"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -10,9 +11,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
-  GithubLogo,
-  InstagramLogo,
-  EnvelopeSimple,
   SealCheck,
   PencilRuler,
   Atom,
@@ -20,6 +18,14 @@ import {
   Lightning,
   Smiley,
   Devices,
+  DotsNineIcon,
+  GithubLogoIcon,
+  InstagramLogoIcon,
+  LinkedinLogoIcon,
+  TwitterLogoIcon,
+  YoutubeLogoIcon,
+  FacebookLogoIcon,
+  EnvelopeSimpleIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -29,6 +35,13 @@ import {
 } from "@/components/ui/hover-card"
 import { ProjectTable } from "./_components/project-table"
 import SettingsMenu from "@/components/settings-menu"
+import { BlogTable } from "./blog/_components/blog-table"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import { cn } from "@/lib/utils"
 
 export default function Home() {
   return (
@@ -73,10 +86,10 @@ export default function Home() {
             <CardTitle>About Me</CardTitle>
             <CardDescription>
               <p className="line-clamp-4">
-                I&aposm a passionate web developer dedicated to crafting elegant
-                and efficient digital solutions. With a keen eye for detail and
-                a problem-solving mindset, I transform complex challenges into
-                seamless user experiences. Here&aposs what drives me:
+                I&apos;m Fadli—a software engineer and UX designer with diverse
+                experience (UI/UX Designer, Data Analyst, Data Scientist, and
+                Software Engineer). I solve challenges with innovative code and
+                design, always embracing the latest technologies.
               </p>
             </CardDescription>
           </CardHeader>
@@ -139,27 +152,77 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Social</CardTitle>
             <CardDescription>Connect with me</CardDescription>
+            <CardAction>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    size={"icon"}
+                    variant={"outline"}
+                    className="cursor-pointer"
+                  >
+                    <DotsNineIcon size={24} weight="bold" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent align="end" side="bottom">
+                  <div
+                    className={cn(
+                      "rounded-md grid grid-cols-3 divide-x divide-y border",
+                      "[&>a]:p-2 [&>a]:flex [&>a]:items-center [&>a]:gap-2 [&>a]:justify-center [&>a]:text-muted-foreground",
+                      "[&>a]:hover:text-foreground [&>a]:aspect-square [&>a]:hover:bg-muted [&>a]:transition-colors [&>a]:cursor-pointer [&>a]:duration-300"
+                    )}
+                  >
+                    <Link href="https://github.com/rafadlis" target="_blank">
+                      <GithubLogoIcon size={24} />
+                      <span className="sr-only">github.com/rafadlis</span>
+                    </Link>
+                    <Link href="https://instagram.com/rafadlis" target="_blank">
+                      <InstagramLogoIcon size={24} />
+                      <span className="sr-only">instagram.com/rafadlis</span>
+                    </Link>
+                    <Link
+                      href="https://linkedin.com/in/rafadlis"
+                      target="_blank"
+                    >
+                      <LinkedinLogoIcon size={24} />
+                      <span className="sr-only">linkedin.com/in/rafadlis</span>
+                    </Link>
+                    <Link href="https://facebook.com/rafadlis" target="_blank">
+                      <FacebookLogoIcon size={24} />
+                      <span className="sr-only">facebook.com/rafadlis</span>
+                    </Link>
+                    <Link href="https://youtube.com/@rafadlis" target="_blank">
+                      <YoutubeLogoIcon size={24} />
+                      <span className="sr-only">youtube.com/@rafadlis</span>
+                    </Link>
+                    <Link href="https://x.com/rafadlis" target="_blank">
+                      <TwitterLogoIcon size={24} />
+                      <span className="sr-only">x.com/rafadlis</span>
+                    </Link>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </CardAction>
           </CardHeader>
           <CardContent className="flex flex-col gap-2">
             <Button variant="link" asChild className="justify-start p-0 h-fit">
               <Link href="https://github.com/rafadlis" target="_blank">
-                <GithubLogo size={24} />
+                <GithubLogoIcon size={24} />
                 <span className="ml-1 font-normal text-muted-foreground">
                   github.com/rafadlis
                 </span>
               </Link>
             </Button>
             <Button variant="link" asChild className="justify-start p-0 h-fit">
-              <Link href="https://instagram.com/rafadlis" target="_blank">
-                <InstagramLogo size={24} />
+              <Link href="https://linkedin.com/in/rafadlis" target="_blank">
+                <LinkedinLogoIcon size={24} />
                 <span className="ml-1 font-normal text-muted-foreground">
-                  instagram.com/rafadlis
+                  linkedin.com/in/rafadlis
                 </span>
               </Link>
             </Button>
             <Button variant="link" asChild className="justify-start p-0 h-fit">
               <Link href="mailto:me@rafadlis.space">
-                <EnvelopeSimple size={24} />
+                <EnvelopeSimpleIcon size={24} />
                 <span className="ml-1 font-normal text-muted-foreground">
                   me@rafadlis.space
                 </span>
@@ -179,6 +242,27 @@ export default function Home() {
         <CardFooter className="text-sm text-muted-foreground">
           This not all my projects, just the ones that I&aposm prepared well
           enough to show
+        </CardFooter>
+      </Card>
+      <Card className="row-span-1">
+        <CardHeader>
+          <CardTitle>My Posts</CardTitle>
+          <CardDescription>Here are my pool of thoughts</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <BlogTable />
+        </CardContent>
+        <CardFooter className="text-sm text-muted-foreground">
+          <p>
+            The blog is open source, you can find the source code on{" "}
+            <Link
+              href="https://github.com/rafadlis/rafadlis.space"
+              target="_blank"
+              className="font-mono bg-muted px-1 rounded-md"
+            >
+              github.com/rafadlis/rafadlis.space
+            </Link>
+          </p>
         </CardFooter>
       </Card>
     </main>
