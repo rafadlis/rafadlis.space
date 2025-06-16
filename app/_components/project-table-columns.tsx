@@ -16,15 +16,23 @@ import {
   PlugsConnected,
   ArrowSquareOut,
 } from "@phosphor-icons/react/dist/ssr"
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover"
-import { Button } from "./ui/button"
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "../../components/ui/popover"
+import { Button } from "../../components/ui/button"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "../../components/ui/hover-card"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip"
+} from "../../components/ui/tooltip"
 import {
   Table,
   TableBody,
@@ -32,7 +40,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/table"
+} from "../../components/ui/table"
 import { createColumnHelper } from "@tanstack/react-table"
 import { useState } from "react"
 import Link from "next/link"
