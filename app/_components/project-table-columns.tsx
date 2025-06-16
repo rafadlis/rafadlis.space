@@ -1,6 +1,6 @@
 "use client"
 
-import { Project, ProjectStatus, ProjectCategory } from "@/lib/data"
+import { Project, ProjectStatus, ProjectCategory } from "@/lib/data-project"
 import { cn } from "@/lib/utils"
 import {
   CheckCircle,

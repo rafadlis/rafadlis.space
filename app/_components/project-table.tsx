@@ -15,7 +15,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-import { projects } from "@/lib/data"
+import { projects } from "@/lib/data-project"
 import { columns } from "./project-table-columns"
 import { useEffect, useState } from "react"
 import { ProjectTableSkeleton } from "./project-table-skeleton"
