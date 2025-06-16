@@ -298,7 +298,7 @@ export const columns = [
         return (
           <div
             className={cn(
-              "text-muted-foreground max-w-prose text-wrap line-clamp-2 cursor-pointer",
+              "text-muted-foreground max-w-lg min-w-[300px] text-wrap line-clamp-2 cursor-pointer",
               expanded && "line-clamp-none"
             )}
             onClick={() => setExpanded(!expanded)}
@@ -315,7 +315,7 @@ export const columns = [
     cell: ({ row }) => {
       const project = row.original
       return (
-        <div className="max-sm:hidden">
+        <div>
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="cursor-pointer">
