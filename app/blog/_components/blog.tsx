@@ -208,6 +208,134 @@ function BlogParagraph({ className, ...props }: React.ComponentProps<"p">) {
   )
 }
 
+function BlogH1({ className, ...props }: React.ComponentProps<"h1">) {
+  return (
+    <h1
+      className={cn(
+        "font-heading mt-12 scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogH2({ className, ...props }: React.ComponentProps<"h2">) {
+  return (
+    <h2
+      className={cn(
+        "font-heading mt-12 scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogH3({ className, ...props }: React.ComponentProps<"h3">) {
+  return (
+    <h3
+      className={cn(
+        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogH4({ className, ...props }: React.ComponentProps<"h4">) {
+  return (
+    <h4
+      className={cn(
+        "font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogH5({ className, ...props }: React.ComponentProps<"h5">) {
+  return (
+    <h5
+      className={cn(
+        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogH6({ className, ...props }: React.ComponentProps<"h6">) {
+  return (
+    <h6
+      className={cn(
+        "mt-8 scroll-m-20 text-sm font-semibold tracking-tight",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogCode({ className, ...props }: React.ComponentProps<"code">) {
+  return (
+    <code
+      className={cn(
+        "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogLink({ className, ...props }: React.ComponentProps<typeof Link>) {
+  return (
+    <Link
+      className={cn(
+        "underline-offset-4 underline hover:decoration-primary",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function BlogReferences({
+  references,
+  className,
+}: {
+  references: { title: string; url: string }[]
+  className?: string
+}) {
+  if (!references?.length) return null
+
+  return (
+    <div className={cn("mt-12 pt-6 border-t", className)}>
+      <h2 className="scroll-m-20 text-sm text-muted-foreground italic">
+        References
+      </h2>
+      <ul className="my-1 [&>li]:mt-2 [&>li]:text-sm">
+        {references.map((reference, index) => (
+          <li key={index}>
+            <BlogLink
+              href={reference.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:underline no-underline"
+            >
+              {reference.title}
+            </BlogLink>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 export {
   Blog,
   BlogHeader,
@@ -217,4 +345,13 @@ export {
   BlogAuthors,
   BlogContent,
   BlogParagraph,
+  BlogH1,
+  BlogH2,
+  BlogH3,
+  BlogH4,
+  BlogH5,
+  BlogH6,
+  BlogCode,
+  BlogLink,
+  BlogReferences,
 }
