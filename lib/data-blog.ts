@@ -27,4 +27,13 @@ export const blogs: Blog[] = [
     status: "published",
     category: "Personal",
   },
+  {
+    slug: "power-bi-untuk-pemula",
+    title: "Power BI untuk Pemula",
+    description:
+      "Pelajari bagaimana memanfaatkan Power BI untuk membuat dashboard yang interaktif dan bisa dibagikan secara online.",
+    publishedAt: new Date("2024-07-27"),
+    status: "published",
+    category: "Data Science",
+  },
 ]
