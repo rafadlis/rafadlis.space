@@ -3,11 +3,11 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { authors } from "@/lib/authors"
 
-type Props = {
-  params: { slug: string }
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
   const { slug } = await params
   const blog = getBlogBySlug(slug)
 

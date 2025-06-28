@@ -11,7 +11,11 @@ export const size = {
 
 export const contentType = "image/png"
 
-export default async function Image({ params }: { params: { slug: string } }) {
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
   const { slug } = await params
   const blog = getBlogBySlug(slug)
 
