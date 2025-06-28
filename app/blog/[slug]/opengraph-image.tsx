@@ -19,6 +19,15 @@ export default async function Image({
   const { slug } = await params
   const blog = getBlogBySlug(slug)
 
+  const [fontData400, fontData700] = await Promise.all([
+    fetch(
+      "https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2"
+    ).then((res) => res.arrayBuffer()),
+    fetch(
+      "https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2"
+    ).then((res) => res.arrayBuffer()),
+  ])
+
   if (!blog) {
     return new ImageResponse(
       (
@@ -53,6 +62,7 @@ export default async function Image({
           alignItems: "flex-start",
           justifyContent: "center",
           backgroundColor: "black",
+          fontFamily: '"Roboto"',
         }}
       >
         <div
@@ -66,6 +76,7 @@ export default async function Image({
             color: "white",
             lineHeight: "120px",
             whiteSpace: "pre-wrap",
+            fontWeight: 700,
           }}
         >
           {blog.title}
@@ -80,6 +91,7 @@ export default async function Image({
             letterSpacing: "-0.025em",
             fontStyle: "normal",
             color: "white",
+            fontWeight: 400,
           }}
         >
           {blog.category}
@@ -88,6 +100,20 @@ export default async function Image({
     ),
     {
       ...size,
+      fonts: [
+        {
+          name: "Roboto",
+          data: fontData400,
+          style: "normal",
+          weight: 400,
+        },
+        {
+          name: "Roboto",
+          data: fontData700,
+          style: "normal",
+          weight: 700,
+        },
+      ],
     }
   )
 }
