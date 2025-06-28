@@ -73,6 +73,7 @@ export default async function Image({
             fontSize: 130,
             letterSpacing: "-0.05em",
             fontStyle: "normal",
+            fontFamily: '"Roboto"',
             color: "white",
             lineHeight: "120px",
             whiteSpace: "pre-wrap",
@@ -90,6 +91,7 @@ export default async function Image({
             fontSize: 40,
             letterSpacing: "-0.025em",
             fontStyle: "normal",
+            fontFamily: '"Roboto"',
             color: "white",
             fontWeight: 400,
           }}
