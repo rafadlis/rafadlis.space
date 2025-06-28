@@ -37,3 +37,7 @@ export const blogs: Blog[] = [
     category: "Data Science",
   },
 ]
+
+export function getBlogBySlug(slug: string) {
+  return blogs.find((blog) => blog.slug === slug)
+}
