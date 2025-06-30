@@ -36,4 +36,13 @@ export const blogs: Blog[] = [
     status: "published",
     category: "Data Science",
   },
+  {
+    slug: "annoying-redirect-function-in-nextjs",
+    title: "The Annoying `redirect()` in Next.js",
+    description:
+      "A deep dive into why Next.js's redirect function throws an error and how to handle it correctly in your server-side logic.",
+    publishedAt: new Date("2024-07-28"),
+    status: "published",
+    category: "App Development",
+  },
 ]
