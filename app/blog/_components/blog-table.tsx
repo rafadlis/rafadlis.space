@@ -35,7 +35,10 @@ export function BlogTable() {
 
   const columns = useBlogTableColumns()
   const data = useMemo(
-    () => blogs.filter((blog) => blog.status !== "archived"),
+    () =>
+      blogs
+        .filter((blog) => blog.status !== "archived")
+        .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime()),
     []
   )
 
