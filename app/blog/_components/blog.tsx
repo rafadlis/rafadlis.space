@@ -43,6 +43,7 @@ function BlogBackLink({
   return (
     <Link
       className={cn(
+        "print:hidden",
         "flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground",
         className
       )}
@@ -272,11 +273,43 @@ function BlogH6({ className, ...props }: React.ComponentProps<"h6">) {
   return (
     <h6
       className={cn(
-        "mt-8 scroll-m-20 text-sm font-semibold tracking-tight",
+        "font-heading mt-6 scroll-m-20 text-base font-semibold tracking-tight",
         className
       )}
       {...props}
     />
+  )
+}
+
+function BlogQuote({
+  className,
+  ...props
+}: React.ComponentProps<"blockquote">) {
+  return (
+    <blockquote
+      className={cn("mt-6 border-l-4 pl-6 italic", className)}
+      {...props}
+    />
+  )
+}
+
+function BlogCodeBlock({
+  code,
+  className,
+  ...props
+}: React.ComponentProps<"pre"> & { code: string }) {
+  return (
+    <pre
+      className={cn(
+        "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-900 py-4 dark:bg-zinc-900",
+        className
+      )}
+      {...props}
+    >
+      <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm text-white">
+        {code}
+      </code>
+    </pre>
   )
 }
 
@@ -351,6 +384,8 @@ export {
   BlogH4,
   BlogH5,
   BlogH6,
+  BlogQuote,
+  BlogCodeBlock,
   BlogCode,
   BlogLink,
   BlogReferences,
