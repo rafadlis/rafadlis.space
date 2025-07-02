@@ -1,3 +1,5 @@
+"use client"
+
 import { cn } from "@/lib/utils"
 import RDotIconLoading from "./r-dot-icon-loading"
 
