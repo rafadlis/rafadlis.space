@@ -32,7 +32,7 @@ function PowerBiBeginnerPage() {
   return (
     <Blog>
       <BlogHeader>
-        <BlogBackLink href="/blog">← Kembali ke Blog</BlogBackLink>
+        <BlogBackLink href="/blog">Kembali ke Blog</BlogBackLink>
         <BlogTitle>{post?.title}</BlogTitle>
         <div className="flex w-full items-center justify-between">
           <BlogMeta date={post?.publishedAt} />
