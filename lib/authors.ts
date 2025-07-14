@@ -41,7 +41,7 @@ export const authors: Record<string, Author> = {
       {
         name: "Instagram",
         icon: InstagramLogo,
-        url: "https://instagram.com/elinmaollani",
+        url: "https://instagram.com/ellin.maollani",
       },
     ],
   },
