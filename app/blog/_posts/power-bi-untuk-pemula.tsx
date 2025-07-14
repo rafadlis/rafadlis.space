@@ -16,7 +16,10 @@ import {
 import { blogs } from "@/lib/data-blog"
 
 function PowerBiBeginnerPage() {
-  const postAuthors = [{ ...authors["rafadlis"], role: "Writer" }]
+  const postAuthors = [
+    { ...authors["rafadlis"], role: "Writer" },
+    { ...authors["elin"], role: "Editor" },
+  ]
   const post = blogs.find((blog) => blog.slug === "power-bi-untuk-pemula")
   const references = [
     {
@@ -33,10 +36,8 @@ function PowerBiBeginnerPage() {
     <Blog>
       <BlogHeader>
         <BlogBackLink href="/blog">Kembali ke Blog</BlogBackLink>
+        <BlogMeta date={post?.publishedAt} />
         <BlogTitle>{post?.title}</BlogTitle>
-        <div className="flex w-full items-center justify-between">
-          <BlogMeta date={post?.publishedAt} />
-        </div>
         <BlogAuthors authors={postAuthors} />
       </BlogHeader>
       <BlogContent>
@@ -56,7 +57,7 @@ function PowerBiBeginnerPage() {
           tinggi. Analogikan kalo Excel tempat mengelola data, Word untuk
           membuat dokumen, dan PowerPoint untuk presentasi. Nah, Power BI adalah
           tempat untuk membuat visualisasi data yang interaktif dengan variasi
-          bisual yang banyak, dan bisa dibagikan secara online.
+          visual yang banyak, dan bisa dibagikan secara online.
         </BlogParagraph>
 
         <BlogH2>Cara Pakainya</BlogH2>
@@ -68,7 +69,7 @@ function PowerBiBeginnerPage() {
         </BlogParagraph>
         <BlogParagraph>
           Ada banyak sekali video tutorial di YouTube. Berikut adalah beberapa
-          rekomendasi dari saya: (Bahasa Inggris):{" "}
+          rekomendasi dari saya (Bahasa Inggris) dan (Bahasa Indonesia):{" "}
           <BlogLink
             href="https://www.youtube.com/watch?v=VaOhNqNtGGE"
             target="_blank"
@@ -77,9 +78,6 @@ function PowerBiBeginnerPage() {
             Power BI Tutorial for Beginners (2025)
           </BlogLink>
           {", "}
-          Kalo mau bahasa Indonesia-nya, tantangannya adalah menemukan konten
-          yang paling baru, karena Power BI diperbarui setiap bulan. Kualitasnya
-          yang kurang bagus (menurut saya), tapi ini link boleh dicoba:{" "}
           <BlogLink
             href="https://www.youtube.com/watch?v=wDsJp-PWIi4"
             target="_blank"

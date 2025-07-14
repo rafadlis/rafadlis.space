@@ -34,4 +34,15 @@ export const authors: Record<string, Author> = {
       },
     ],
   },
+  elin: {
+    name: "Ellin Maollani",
+    image: "",
+    socials: [
+      {
+        name: "Instagram",
+        icon: InstagramLogo,
+        url: "https://instagram.com/elinmaollani",
+      },
+    ],
+  },
 }
