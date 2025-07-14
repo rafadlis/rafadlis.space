@@ -38,10 +38,8 @@ function AnnoyingRedirectFunctionInNextJsPage() {
     <Blog>
       <BlogHeader>
         <BlogBackLink href="/blog">Back to Blog</BlogBackLink>
+        <BlogMeta date={post?.publishedAt} />
         <BlogTitle>{post?.title}</BlogTitle>
-        <div className="flex w-full items-center justify-between">
-          <BlogMeta date={post?.publishedAt} />
-        </div>
         <BlogAuthors authors={postAuthors} />
       </BlogHeader>
       <BlogContent>
