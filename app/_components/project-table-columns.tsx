@@ -15,6 +15,7 @@ import {
   Globe,
   PlugsConnected,
   ArrowSquareOut,
+  ArrowRight,
 } from "@phosphor-icons/react/dist/ssr"
 import {
   Popover,
@@ -46,9 +47,9 @@ import { useState } from "react"
 import Link from "next/link"
 // Map category types to icons
 const categoryIcons: Record<ProjectCategory, React.ReactNode> = {
-  "web-app": <AppWindow className="h-4 w-4 text-muted-foreground" />,
-  website: <Globe className="h-4 w-4 text-muted-foreground" />,
-  "api-web": <PlugsConnected className="h-4 w-4 text-muted-foreground" />,
+  "Web App": <AppWindow className="h-4 w-4 text-muted-foreground" />,
+  Website: <Globe className="h-4 w-4 text-muted-foreground" />,
+  "Web API": <PlugsConnected className="h-4 w-4 text-muted-foreground" />,
 }
 
 // Status configuration with icons and styling
@@ -264,14 +265,14 @@ export const columns = [
       const category = row.original.category
       return (
         <div className="flex items-center gap-1.5 w-fit whitespace-nowrap">
-          {categoryIcons[category.icon as ProjectCategory]}
-          {category.name}
+          {categoryIcons[category]}
+          {category}
         </div>
       )
     },
     sortingFn: (rowA, rowB) => {
-      const categoryA = rowA.original.category.name
-      const categoryB = rowB.original.category.name
+      const categoryA = rowA.original.category
+      const categoryB = rowB.original.category
       return categoryA.localeCompare(categoryB)
     },
   }),
@@ -362,6 +363,29 @@ export const columns = [
     },
     sortingFn: (rowA, rowB) => {
       return rowA.original.tech.length - rowB.original.tech.length
+    },
+  }),
+  columnHelper.display({
+    id: "actions",
+    cell: ({ row }) => {
+      const project = row.original
+      return (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button asChild variant="ghost" size="icon">
+                <Link href={`/project/${project.slug}`}>
+                  <ArrowRight className="size-4 text-muted-foreground" />
+                  <span className="sr-only">Read More</span>
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Read More</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      )
     },
   }),
 ]
