@@ -26,6 +26,8 @@ import {
   YoutubeLogoIcon,
   FacebookLogoIcon,
   EnvelopeSimpleIcon,
+  BooksIcon,
+  BinocularsIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -235,6 +237,13 @@ export default function Home() {
         <CardHeader>
           <CardTitle>Projects</CardTitle>
           <CardDescription>The projects that I have worked on</CardDescription>
+          <CardAction>
+            <Button variant="outline" asChild>
+              <Link href="/project">
+                <BooksIcon className="text-muted-foreground" /> Seek More
+              </Link>
+            </Button>
+          </CardAction>
         </CardHeader>
         <CardContent>
           <ProjectTable />
@@ -248,6 +257,14 @@ export default function Home() {
         <CardHeader>
           <CardTitle>My Posts</CardTitle>
           <CardDescription>Here are my pool of thoughts</CardDescription>
+          <CardAction>
+            <Button variant="outline" asChild>
+              <Link href="/blog">
+                <BinocularsIcon className="text-muted-foreground" /> Explore
+                More
+              </Link>
+            </Button>
+          </CardAction>
         </CardHeader>
         <CardContent>
           <BlogTable />
