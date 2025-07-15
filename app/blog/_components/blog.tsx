@@ -13,6 +13,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Button } from "@/components/ui/button"
+import { BackButton } from "@/components/back-button"
 
 function Blog({ className, ...props }: React.ComponentProps<"article">) {
   return (
@@ -52,6 +53,18 @@ function BlogBackLink({
       <ArrowLeft />
       {children}
     </Link>
+  )
+}
+
+function BlogBackButton({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof BackButton>) {
+  return (
+    <BackButton className={cn("print:hidden", className)} {...props}>
+      {children}
+    </BackButton>
   )
 }
 
@@ -373,6 +386,7 @@ export {
   Blog,
   BlogHeader,
   BlogBackLink,
+  BlogBackButton,
   BlogTitle,
   BlogMeta,
   BlogAuthors,
