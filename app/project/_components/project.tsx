@@ -103,7 +103,7 @@ function ProjectMeta({
         {status.replace("-", " ")}
       </span>
       <span className="font-mono text-xs">{version}</span>
-      <span className="text-xs">{category.name}</span>
+      <span className="text-xs">{category}</span>
     </div>
   )
 }
