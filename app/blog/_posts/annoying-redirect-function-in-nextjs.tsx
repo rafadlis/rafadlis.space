@@ -10,7 +10,7 @@ import {
   BlogParagraph,
   BlogReferences,
   BlogTitle,
-  BlogBackLink,
+  BlogBackButton,
 } from "../_components/blog"
 import { blogs } from "@/lib/data-blog"
 
@@ -37,7 +37,7 @@ function AnnoyingRedirectFunctionInNextJsPage() {
   return (
     <Blog>
       <BlogHeader>
-        <BlogBackLink href="/blog">Back to Blog</BlogBackLink>
+        <BlogBackButton>Back</BlogBackButton>
         <BlogMeta date={post?.publishedAt} />
         <BlogTitle>{post?.title}</BlogTitle>
         <BlogAuthors authors={postAuthors} />

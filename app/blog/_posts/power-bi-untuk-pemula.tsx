@@ -11,7 +11,7 @@ import {
   BlogReferences,
   BlogTitle,
   BlogLink,
-  BlogBackLink,
+  BlogBackButton,
 } from "../_components/blog"
 import { blogs } from "@/lib/data-blog"
 
@@ -35,7 +35,7 @@ function PowerBiBeginnerPage() {
   return (
     <Blog>
       <BlogHeader>
-        <BlogBackLink href="/blog">Kembali ke Blog</BlogBackLink>
+        <BlogBackButton>Kembali</BlogBackButton>
         <BlogMeta date={post?.publishedAt} />
         <BlogTitle>{post?.title}</BlogTitle>
         <BlogAuthors authors={postAuthors} />
