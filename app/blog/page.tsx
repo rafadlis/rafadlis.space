@@ -1,5 +1,6 @@
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -11,8 +12,11 @@ import {
   Code,
   Flask,
   Receipt,
+  HouseSimpleIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import { BlogTable } from "./_components/blog-table"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function BlogPage() {
   return (
@@ -23,9 +27,17 @@ export default function BlogPage() {
           <CardDescription>
             Here are some of the posts I&apos;ve written.
           </CardDescription>
+          <CardAction>
+            <Button asChild variant="outline">
+              <Link href="/">
+                <HouseSimpleIcon />
+                <span className="max-md:hidden">Back to Home</span>
+              </Link>
+            </Button>
+          </CardAction>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-flow-col divide-x gap-4 py-4">
+          <div className="grid grid-cols-2 gap-4 py-4 sm:grid-cols-3 lg:grid-cols-5">
             <div className="flex flex-col items-center gap-2">
               <Code className="text-3xl" weight="light" />
               <p className="text-sm">App Development</p>
