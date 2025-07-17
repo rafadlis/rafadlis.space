@@ -226,11 +226,20 @@ function BlogH1({ className, ...props }: React.ComponentProps<"h1">) {
   return (
     <h1
       className={cn(
-        "font-heading mt-12 scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0",
+        "font-heading mt-12 scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 relative",
         className
       )}
       {...props}
-    />
+    >
+      {props.children}
+      <span
+        className="text-muted-foreground/30 inline md:absolute md:-left-8 md:top-0"
+        aria-hidden="true"
+      >
+        {" "}
+        #1
+      </span>
+    </h1>
   )
 }
 
@@ -238,11 +247,20 @@ function BlogH2({ className, ...props }: React.ComponentProps<"h2">) {
   return (
     <h2
       className={cn(
-        "font-heading mt-12 scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0",
+        "font-heading mt-12 scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 relative",
         className
       )}
       {...props}
-    />
+    >
+      {props.children}
+      <span
+        className="text-muted-foreground/30 inline md:absolute md:-left-8 md:top-0"
+        aria-hidden="true"
+      >
+        {" "}
+        #2
+      </span>
+    </h2>
   )
 }
 
@@ -250,11 +268,20 @@ function BlogH3({ className, ...props }: React.ComponentProps<"h3">) {
   return (
     <h3
       className={cn(
-        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight relative",
         className
       )}
       {...props}
-    />
+    >
+      {props.children}
+      <span
+        className="text-muted-foreground/30 inline md:absolute md:-left-8 md:top-0"
+        aria-hidden="true"
+      >
+        {" "}
+        #3
+      </span>
+    </h3>
   )
 }
 
@@ -262,11 +289,20 @@ function BlogH4({ className, ...props }: React.ComponentProps<"h4">) {
   return (
     <h4
       className={cn(
-        "font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
+        "font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight relative",
         className
       )}
       {...props}
-    />
+    >
+      {props.children}
+      <span
+        className="text-muted-foreground/30 inline md:absolute md:-left-8 md:top-0"
+        aria-hidden="true"
+      >
+        {" "}
+        #4
+      </span>
+    </h4>
   )
 }
 
@@ -274,11 +310,20 @@ function BlogH5({ className, ...props }: React.ComponentProps<"h5">) {
   return (
     <h5
       className={cn(
-        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
+        "mt-8 scroll-m-20 text-base font-semibold tracking-tight relative",
         className
       )}
       {...props}
-    />
+    >
+      {props.children}
+      <span
+        className="text-muted-foreground/30 inline md:absolute md:-left-8 md:top-0"
+        aria-hidden="true"
+      >
+        {" "}
+        #5
+      </span>
+    </h5>
   )
 }
 
@@ -286,11 +331,20 @@ function BlogH6({ className, ...props }: React.ComponentProps<"h6">) {
   return (
     <h6
       className={cn(
-        "font-heading mt-6 scroll-m-20 text-base font-semibold tracking-tight",
+        "font-heading mt-6 scroll-m-20 text-base font-semibold tracking-tight relative",
         className
       )}
       {...props}
-    />
+    >
+      {props.children}
+      <span
+        className="text-muted-foreground/30 inline md:absolute md:-left-8 md:top-0"
+        aria-hidden="true"
+      >
+        {" "}
+        #6
+      </span>
+    </h6>
   )
 }
 
