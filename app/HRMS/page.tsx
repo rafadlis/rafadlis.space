@@ -74,11 +74,9 @@ export default function HRMS() {
             kerja tim Anda.
           </p>
 
-          <h2 className="text-2xl font-extrabold mt-4 mb-3">
-            Metodologi Kerja
-          </h2>
+          <h2 className="text-2xl font-extrabold mt-6">Metodologi Kerja</h2>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 mt-6">
             <div className="flex flex-row gap-3">
               <h3 className="mt-1 shrink-0 bg-muted rounded-md border size-8 flex items-center justify-center">
                 <span>1</span> <span className="sr-only">Analisis</span>
@@ -182,14 +180,14 @@ export default function HRMS() {
 
         <section className="mt-8">
           <h2 className="text-2xl font-extrabold mb-4">Pricing</h2>
-          <p className="mb-6 text-justify">
+          <p className="text-justify">
             Harga fleksibel disesuaikan dengan kebutuhan hotel Anda. Sistem
             menggunakan metode add-on sehingga Anda hanya membayar fitur yang
             benar-benar digunakan.
           </p>
 
           <div className="flex flex-col gap-6">
-            <div>
+            <div className="mt-8">
               <h3 className="font-semibold mb-3">Harga Tawaran Dasar</h3>
               <div className="border rounded-lg overflow-hidden">
                 <Table>
@@ -293,7 +291,7 @@ export default function HRMS() {
               </div>
             </div>
 
-            <div>
+            <div className="mt-8">
               <h3 className="font-semibold mb-3">Harga Add-On</h3>
               <p className="mb-4 text-justify text-muted-foreground">
                 Harga add-on dapat disesuaikan dan masih dapat didiskusikan
