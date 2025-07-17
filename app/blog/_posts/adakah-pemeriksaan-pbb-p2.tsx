@@ -6,6 +6,7 @@ import {
   BlogContent,
   BlogH1,
   BlogH2,
+  BlogH3,
   BlogHeader,
   BlogMeta,
   BlogParagraph,
@@ -188,7 +189,21 @@ export default function AdakahPemeriksaanPbbP2() {
           Tapi perhatikan kembali, Pemeriksaan PBB-P2 masuk kedalam kritaria
           atau pasal yang mana?
         </BlogParagraph>
-        <BlogH2>Kesimpulan</BlogH2>
+        <BlogH3>
+          {" "}
+          @ Terdapat keterangan lain berupa Data Konkret yang menunjukkan bahwa
+          Pajak yang terutang tidak atau kurang dibayar
+        </BlogH3>
+        <BlogParagraph>
+          Apakah dengan klausul diatas kita bisa menyimpulkan bahwa PBB-P2 bisa
+          diperiksa oleh Pemeriksa Pajak Daerah?
+        </BlogParagraph>
+        <BlogQuote>
+          Tidak, Kenapa? kita harus memahami kembali apa itu{" "}
+          <BlogCode>Keterangan Lain</BlogCode>,{" "}
+          <BlogCode>Data Konkret</BlogCode>, dan{" "}
+          <BlogCode>Pajak yang Terutang</BlogCode>.
+        </BlogQuote>
       </BlogContent>
     </Blog>
   )
