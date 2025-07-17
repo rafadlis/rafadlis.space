@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import {
   Table,
   TableBody,
+  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -205,7 +206,7 @@ export default function HRMS() {
                           Description
                         </TableHead>
                         <TableHead className="w-1/6 text-right text-muted-foreground min-w-[80px]">
-                          Price (Rp)
+                          Price (Rp)*
                         </TableHead>
                         <TableHead className="w-1/6 text-muted-foreground min-w-[70px]">
                           Payment
@@ -270,8 +271,23 @@ export default function HRMS() {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell>Server</TableCell>
-                        <TableCell>Biaya tahunan server</TableCell>
+                        <TableCell>Training Pegawai</TableCell>
+                        <TableCell className="whitespace-normal">
+                          Pelatihan langsung di hotel sambil bekerja selam 3
+                          bulan
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          ~
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          1x
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Server & Hosting**</TableCell>
+                        <TableCell className="whitespace-normal">
+                          Biaya tahunan server agar bisa online
+                        </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
                           3,000,000
                         </TableCell>
@@ -285,13 +301,20 @@ export default function HRMS() {
                         </TableCell>
                         <TableCell className="font-medium whitespace-normal"></TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
-                          30,000,000
+                          33,000,000
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
                           / pertama
                         </TableCell>
                       </TableRow>
                     </TableBody>
+                    <TableCaption>
+                      <p className="text-left px-2">
+                        *Harga flexible, masih bisa di diskusikan <br />
+                        **Server ini optional, tapi direkomendasikan menggunakan
+                        server
+                      </p>
+                    </TableCaption>
                   </Table>
                 </div>
               </div>
@@ -319,12 +342,15 @@ export default function HRMS() {
                         <TableHead className="w-1/6 text-right text-muted-foreground min-w-[80px]">
                           Price (Rp)
                         </TableHead>
+                        <TableHead className="w-1/6 text-muted-foreground min-w-[70px]">
+                          Payment
+                        </TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       <TableRow>
                         <TableCell className="font-medium whitespace-normal">
-                          Restaurant POS Integration
+                          Restaurant POS
                         </TableCell>
                         <TableCell className="whitespace-normal">
                           Manajemen F&B, kontrol menu, pesanan dapur
@@ -332,39 +358,38 @@ export default function HRMS() {
                         <TableCell className="text-right whitespace-nowrap font-mono">
                           8,000,000
                         </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell className="font-medium whitespace-normal">
-                          Spa & Wellness Management
-                        </TableCell>
-                        <TableCell className="whitespace-normal">
-                          Booking treatment, jadwal therapist, inventory
-                        </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
-                          6,000,000
+                          1x
                         </TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell className="font-medium whitespace-normal">
-                          Event & Conference Management
+                          Guest App
                         </TableCell>
                         <TableCell className="whitespace-normal">
-                          Booking ruang meeting, manajemen equipment, catering
-                        </TableCell>
-                        <TableCell className="text-right whitespace-nowrap font-mono">
-                          7,000,000
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell className="font-medium whitespace-normal">
-                          Mobile Guest App
-                        </TableCell>
-                        <TableCell className="whitespace-normal">
-                          Layanan tamu mobile, room service, permintaan
-                          concierge
+                          Layanan online tamu untuk Booking, permintaan
+                          concierge, dan pesan F&B
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
                           12,000,000
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          1x
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium whitespace-normal">
+                          Payment Gateway
+                        </TableCell>
+                        <TableCell className="whitespace-normal">
+                          Pembayaran lewat QRIS, GOPAY, Visa, Mastercard,
+                          Virtual Account, dan lainnya
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          9,000,000
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          1x
                         </TableCell>
                       </TableRow>
                       <TableRow>
@@ -378,27 +403,51 @@ export default function HRMS() {
                         <TableCell className="text-right whitespace-nowrap font-mono">
                           10,000,000
                         </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell className="font-medium whitespace-normal">
-                          Multi-property Management
-                        </TableCell>
-                        <TableCell className="whitespace-normal">
-                          Manajemen terpusat untuk jaringan hotel
-                        </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
-                          15,000,000
+                          1x
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="font-medium whitespace-normal">
-                          API Integration Platform
+                        <TableCell className="whitespace-normal">
+                          WhatsApp Notif
                         </TableCell>
                         <TableCell className="whitespace-normal">
-                          Integrasi pihak ketiga (OTA, payment gateway)
+                          Notifikasi otomatis melalui WhatsApp ke tamu dan
+                          pegawai seperti notif kamar vacant ke Housekeeping
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
-                          9,000,000
+                          1,000,000
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          / 1,000 notif
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium whitespace-normal">
+                          Spa & Wellness Management
+                        </TableCell>
+                        <TableCell className="whitespace-normal">
+                          Booking treatment, jadwal therapist, inventory
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          6,000,000
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          1x
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium whitespace-normal">
+                          Event & Conference Management
+                        </TableCell>
+                        <TableCell className="whitespace-normal">
+                          Booking ruang meeting, manajemen equipment, catering
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          7,000,000
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          1x
                         </TableCell>
                       </TableRow>
                     </TableBody>
