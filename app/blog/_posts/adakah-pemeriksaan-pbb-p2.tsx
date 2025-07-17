@@ -89,13 +89,14 @@ export default function AdakahPemeriksaanPbbP2() {
           Pemeriksa. Namun, kita perlu membaca aturan secara keseluruhan agar
           terlihat <BlogCode>Pagar-pagarnya</BlogCode>
         </BlogParagraph>
+        <BlogH2>Aturan per Aturan</BlogH2>
         <BlogParagraph>
           Tahap pertama adalah memahami kata per kata. Harus paham dulu apa itu{" "}
           <BlogCode>Pemeriksaan</BlogCode>. Perlu diingat, kosa kata{" "}
           <BlogCode>Pemeriksaan</BlogCode> pasti dijelaskan dalam aturan
           perpajakan jika disebutkan. Merujuk pada dasar aturan perpajakan
           daerah secara hirarki, pemeriksaan disbutkan dalam Peraturan
-          Pemerintah Nomor 35 tahun 2023 tentang Kentetuan Umum Pajak dan
+          Pemerintah (PP) Nomor 35 tahun 2023 tentang Kentetuan Umum Pajak dan
           Retribusi Daerah. Di Pasal 1 ayat (75) disebutkan bahwa:
         </BlogParagraph>
         <BlogQuote>
@@ -146,6 +147,48 @@ export default function AdakahPemeriksaanPbbP2() {
           pencocokan, atau pengumpulan materi yang berkaitan dengan tujuan
           Pemeriksaan.
         </BlogQuote>
+        <BlogParagraph>
+          Apa dari sini sudah bisa disimpulkan? mungkin beberapa ada yang bilang
+          sudah. Tapi kalau kita perdalam lagi, pemeriksaan terbagi lagi menjadi
+          beberapa kriteria dari luang lingkup yang sudah disebutkan. Disebutkan
+          pasal 5 ayat (1) untuk kelanjutan pasal 4 dan pasal 65 ayat (1) untuk
+          kelanjutan pasal 64 secara berurutan bahwa:
+        </BlogParagraph>
+        <BlogQuote>
+          Pemeriksaan untuk menguji kepatuhan pemenuhan kewajiban Pajak
+          sebagaimana dimaksud dalam Pasal 4, dilakukan dalam hal: a. Wajib
+          Pajak mengajukan permohonan pengembalian atau kompensasi kelebihan
+          pembayaran Pajak; b. terdapat keterangan lain berupa Data Konkret yang
+          menunjukkan bahwa Pajak yang terutang tidak atau kurang dibayar; atau
+          c. Wajib Pajak yang terpilih untuk dilakukan Pemeriksaan berdasarkan
+          Analisis Risiko.
+        </BlogQuote>
+        <BlogQuote>
+          Pemeriksaan untuk tujuan lain dilakukan dengan kriteria paling
+          sedikit: a. pemberian NPWPD secara jabatan; b. penghapusan NPWPD; c.
+          penyelesaian permohonan keberatan Wajib Pajak; d. pencocokan data
+          dan/atau alat keterangan; dan/atau e. Pemeriksaan dalam rangka
+          Penagihan Pajak.
+        </BlogQuote>
+        <BlogParagraph>
+          Lalu lebih lengkapnya pasal 65 ayat (2) disebutkan bahwa:
+        </BlogParagraph>
+        <BlogQuote>
+          Pemeriksaan dalam rangka Penagihan Pajak sebagaimana dimaksud pada
+          ayat (1) huruf e dilakukan untuk memperoleh data, keterangan dan bukti
+          yang berkaitan dengan: a. harta yang dimiliki Wajib Pajak/Penanggung
+          Pajak; b. proses timbulnya tunggakan pajak berdasarkan LHP, KKP dan
+          atau Berita Acara Hasil Pemeriksaan; c. kegiatan penagihan aktif yang
+          dilakukan; dan d. upaya hukum dari Wajib Pajak/Penanggung Pajak.
+        </BlogQuote>
+        <BlogH2>Sudah bisa disimpulkan?</BlogH2>
+        <BlogParagraph>
+          Dari aturan yang sudah disebutkan diatas mungkin tidak sedikit yang
+          menyimpulkan bahwa PBB-P2 bisa diperiksa oleh Pemeriksa Pajak Daerah.
+          Tapi perhatikan kembali, Pemeriksaan PBB-P2 masuk kedalam kritaria
+          atau pasal yang mana?
+        </BlogParagraph>
+        <BlogH2>Kesimpulan</BlogH2>
       </BlogContent>
     </Blog>
   )
