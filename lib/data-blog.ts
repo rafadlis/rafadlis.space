@@ -32,7 +32,7 @@ export const blogs: Blog[] = [
     title: "Power BI untuk Pemula",
     description:
       "Pelajari bagaimana memanfaatkan Power BI untuk membuat dashboard yang interaktif dan bisa dibagikan secara online.",
-    publishedAt: new Date("2024-07-27"),
+    publishedAt: new Date("2025-06-09"),
     status: "published",
     category: "Data Science",
   },
@@ -41,7 +41,7 @@ export const blogs: Blog[] = [
     title: "The Annoying `redirect()` in Next.js",
     description:
       "A deep dive into why Next.js's redirect function throws an error and how to handle it correctly in your server-side logic.",
-    publishedAt: new Date("2024-07-28"),
+    publishedAt: new Date("2025-06-15"),
     status: "published",
     category: "App Development",
   },
@@ -50,7 +50,7 @@ export const blogs: Blog[] = [
     title: "Adakah Pemeriksaan PBB-P2?",
     description:
       "Pembahasan mengenai kemungkinan pemeriksaan PBB-P2 (Pajak Bumi dan Bangunan Perdesaan dan Perkotaan) dan hal-hal yang perlu diperhatikan terkait administrasi perpajakan properti.",
-    publishedAt: new Date("2024-12-19"),
+    publishedAt: new Date("2025-07-17"),
     status: "draft",
     category: "Tax",
   },
