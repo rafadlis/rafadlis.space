@@ -79,10 +79,73 @@ export default function AdakahPemeriksaanPbbP2() {
         </BlogParagraph>
         <BlogQuote>
           Di Pemerintah Daerah, yang mengatur mengenai pajak daerah ada 1
-          Undang-undang, 1 Peraturan Pemerintah, 2 Peraturan Menteri Keuangan,
-          dan minimal 2 Aturan Daerah (PERKADA){" "}
+          Undang-undang, 1 Peraturan Pemerintah, 2 Peraturan Menteri Keuangan, 1
+          Peraturan Menteri ESDM, minimal 2 Aturan Daerah (PERKADA) , dan aturan
+          lainnya yang penulis mungkin belum sebutkan
         </BlogQuote>
         <BlogH1>Kita Ke Pembahasan Inti</BlogH1>
+        <BlogParagraph>
+          Tidak ada jawaban eksplisit apakah PBB-P2 bisa diperiksa oleh
+          Pemeriksa. Namun, kita perlu membaca aturan secara keseluruhan agar
+          terlihat <BlogCode>Pagar-pagarnya</BlogCode>
+        </BlogParagraph>
+        <BlogParagraph>
+          Tahap pertama adalah memahami kata per kata. Harus paham dulu apa itu{" "}
+          <BlogCode>Pemeriksaan</BlogCode>. Perlu diingat, kosa kata{" "}
+          <BlogCode>Pemeriksaan</BlogCode> pasti dijelaskan dalam aturan
+          perpajakan jika disebutkan. Merujuk pada dasar aturan perpajakan
+          daerah secara hirarki, pemeriksaan disbutkan dalam Peraturan
+          Pemerintah Nomor 35 tahun 2023 tentang Kentetuan Umum Pajak dan
+          Retribusi Daerah. Di Pasal 1 ayat (75) disebutkan bahwa:
+        </BlogParagraph>
+        <BlogQuote>
+          Pemeriksaan adalah serangkaian kegiatan menghimpun dan mengolah data,
+          keterangan, dan/atau bukti yang dilaksanakan secara objektif dan
+          profesional berdasarkan suatu standar Pemeriksaan untuk menguji
+          kepatuhan pemenuhan kewajiban Pajak dan Retribusi dan/atau untuk
+          tujuan lain dalam rangka melaksanakan ketentuan peraturan
+          perundang-undangan perpajakan dan Retribusi Daerah.
+        </BlogQuote>
+        <BlogParagraph>
+          Lalu pelaksana dari kegiatan Pemeriksaan Pajak Daerah disbutkan dalam
+          Peraturan Menteri Keuangan (PMK) Nomor 7 tahun 2025 tentang Pedoman
+          Pemeriksaan dan Penagihan pajak Daerah. Disebutkan dalam pasal 1 ayat
+          (6), (7), dan (8) disebutkan secara berurutan bahwa:
+        </BlogParagraph>
+        <BlogQuote>
+          Pejabat Pemeriksa Pajak yang selanjutnya disebut Pejabat Pemeriksa
+          adalah pejabat fungsional pengawas keuangan negara di lingkungan
+          Pemerintah Daerah yang diberikan tugas dan ruang lingkup kegiatan
+          untuk melakukan Pemeriksaan di bidang Pajak.
+        </BlogQuote>
+        <BlogQuote>
+          Petugas Pemeriksa Pajak yang selanjutnya disebut Petugas Pemeriksa
+          adalah pegawai negeri sipil di lingkungan Pemerintah Daerah yang
+          ditunjuk oleh Kepala Daerah, diberi tugas, wewenang, tanggung jawab,
+          dan memiliki kemampuan untuk melaksanakan Pemeriksaan.
+        </BlogQuote>
+        <BlogQuote>
+          Pemeriksa Pajak yang selanjutnya disebut Pemeriksa adalah Pejabat
+          Pemeriksa dan/atau Petugas Pemeriksa di lingkungan Pemerintah Daerah,
+          yang diberikan tugas dan ruang lingkup kegiatan untuk melakukan
+          Pemeriksaan di bidang Pajak.
+        </BlogQuote>
+        <BlogParagraph>
+          Setelah jelas apa itu pemeriksaan dan siapa yang melakukannya, di PMK
+          itu juga dijelaskan ruang lingkup kegiatan pemeriksaan. Disebutkan
+          dalam Pasal 4 dan pasal 64 secara berurutan bahwa:
+        </BlogParagraph>
+        <BlogQuote>
+          Ruang lingkup Pemeriksaan untuk menguji kepatuhan pemenuhan kewajiban
+          Pajak dapat meliputi satu, beberapa, atau seluruh jenis Pajak, baik
+          untuk satu atau beberapa Masa Pajak, bagian Tahun Pajak, atau Tahun
+          Pajak dalam tahun tahun sebelumnya maupun tahun berjalan.
+        </BlogQuote>
+        <BlogQuote>
+          Ruang lingkup Pemeriksaan untuk tujuan lain dapat meliputi penentuan,
+          pencocokan, atau pengumpulan materi yang berkaitan dengan tujuan
+          Pemeriksaan.
+        </BlogQuote>
       </BlogContent>
     </Blog>
   )
