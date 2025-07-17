@@ -45,4 +45,13 @@ export const blogs: Blog[] = [
     status: "published",
     category: "App Development",
   },
+  {
+    slug: "adakah-pemeriksaan-pbb-p2",
+    title: "Adakah Pemeriksaan PBB-P2?",
+    description:
+      "Pembahasan mengenai kemungkinan pemeriksaan PBB-P2 (Pajak Bumi dan Bangunan Perdesaan dan Perkotaan) dan hal-hal yang perlu diperhatikan terkait administrasi perpajakan properti.",
+    publishedAt: new Date("2024-12-19"),
+    status: "draft",
+    category: "Tax",
+  },
 ]
