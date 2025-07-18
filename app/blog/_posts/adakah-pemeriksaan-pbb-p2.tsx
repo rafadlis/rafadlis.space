@@ -7,6 +7,7 @@ import {
   BlogH1,
   BlogH2,
   BlogH3,
+  BlogH4,
   BlogHeader,
   BlogMeta,
   BlogParagraph,
@@ -191,8 +192,10 @@ export default function AdakahPemeriksaanPbbP2() {
         </BlogParagraph>
         <BlogH3>
           {" "}
-          @ Terdapat keterangan lain berupa Data Konkret yang menunjukkan bahwa
-          Pajak yang terutang tidak atau kurang dibayar
+          @ Pemeriksaan untuk menguji kepatuhan pemenuhan kewajiban Pajak
+          sebagaimana dimaksud dalam Pasal 4, dilakukan dalam hal ... Terdapat
+          keterangan lain berupa Data Konkret yang menunjukkan bahwa Pajak yang
+          terutang tidak atau kurang dibayar
         </BlogH3>
         <BlogParagraph>
           Apakah dengan klausul diatas kita bisa menyimpulkan bahwa PBB-P2 bisa
@@ -275,9 +278,25 @@ export default function AdakahPemeriksaanPbbP2() {
           yang digunakan untuk kegiatan usaha perkebunan, perhutanan, dan
           pertambangan.
         </BlogQuote>
-        <BlogParagraph></BlogParagraph>
-        <BlogQuote></BlogQuote>
-        <BlogParagraph></BlogParagraph>
+        <BlogParagraph>
+          Selanjutnya ada frasa <BlogCode>Tidak dibayar</BlogCode> dan{" "}
+          <BlogCode>kurang dibayar</BlogCode>. Arti kata{" "}
+          <BlogCode>Tidak dibayar</BlogCode> berarti ada sesuatu yang harus
+          dibayar karena suatu hal tapi tidak dibayar sedangkan{" "}
+          <BlogCode>kurang dibayar</BlogCode> berarti ada sesuatu yang harus
+          dibayar karena suatu hal tapi hanya dibayar sebagian saja sehingga ada
+          sisa yang harus dibayar.
+        </BlogParagraph>
+        <BlogParagraph>
+          {" "}
+          Mari kita uji, dari penjelasan diatas, apakah ada skenario PBB-P2 yang
+          cocok dengan klausul diatas?
+        </BlogParagraph>
+        <BlogH4>Argumen 1</BlogH4>
+        <BlogParagraph>
+          Bisa tuh kalo ada Wajib Pajak yang dia tidak bayar-bayar terus udah
+          tenggat waktu
+        </BlogParagraph>
       </BlogContent>
     </Blog>
   )
