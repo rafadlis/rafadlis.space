@@ -203,17 +203,36 @@ export default function AdakahPemeriksaanPbbP2() {
         </BlogParagraph>
         <BlogQuote>
           Belum tentu, Kenapa? kita harus memahami kembali apa itu{" "}
-          <BlogCode>Keterangan Lain</BlogCode>,{" "}
+          <BlogCode>Menguji</BlogCode>,<BlogCode>Keterangan Lain</BlogCode>,{" "}
           <BlogCode>Data Konkret</BlogCode>,
           <BlogCode>Pajak yang Terutang</BlogCode>,
           <BlogCode>Tidak dibayar</BlogCode>, dan
           <BlogCode>kurang dibayar</BlogCode>.
         </BlogQuote>
         <BlogParagraph>
-          Frasa dari <BlogCode>Keterangan Lain</BlogCode> memiliki makna yang
-          krusial. Di situ terdapat kata <BlogCode>Lain</BlogCode> yang artinya
-          hal dimaksud bukan sebuah yang utama, yang biasanya, atau umumnya. Di
-          sini kita harus membedakan mana yang disebut{" "}
+          Kata dari <BlogCode>Menguji</BlogCode> memiliki makna yang krusial.
+          Tapi Kata <BlogCode>Menguji</BlogCode> tidak dijelaskan dalam pasal 1.
+          Maka dari itu, kita gunakan pengertian pada umumnya atau pengertian
+          yang baku dimana secara legal dijelaskan dalam KBBI. Kata{" "}
+          <BlogCode>Menguji</BlogCode> berdasarkan KBBI berarti:
+          <BlogQuote>
+            <BlogCode>v</BlogCode> memeriksa untuk mengetahui mutu (kepandaian
+            dan sebagainya) sesuatu dan sebagainya
+          </BlogQuote>
+          <BlogQuote>
+            <BlogCode>v</BlogCode>
+            memeriksa (kadar emas) dengan batu uji dan sebagainya
+          </BlogQuote>
+          <BlogQuote>
+            <BlogCode>v</BlogCode> mencobai (ketaatan, kesetiaan, cinta,
+            kesucian, dan sebagainya)
+          </BlogQuote>
+        </BlogParagraph>
+        <BlogParagraph>
+          Lalu, Frasa dari <BlogCode>Keterangan Lain</BlogCode> memiliki makna
+          yang krusial. Di situ terdapat kata <BlogCode>Lain</BlogCode> yang
+          artinya hal dimaksud bukan sebuah yang utama, yang biasanya, atau
+          umumnya. Di sini kita harus membedakan mana yang disebut{" "}
           <BlogCode>Keterangan</BlogCode> dan mana yang disebut{" "}
           <BlogCode>Keterangan Lain</BlogCode>.
         </BlogParagraph>
@@ -221,9 +240,7 @@ export default function AdakahPemeriksaanPbbP2() {
           Lalu ada <BlogCode>Data Konkret</BlogCode>. Frasa tersebut terdiri
           dari 2 kata yaitu <BlogCode>Data</BlogCode> dan{" "}
           <BlogCode>Konkret</BlogCode> dimana tidak dijelaskan dalam Pasal 1.
-          Maka dari itu, kita gunakan pengertian pada umumnya atau pengertian
-          yang baku yang secara legal dijelaskan dalam KBBI. Kata{" "}
-          <BlogCode>Data</BlogCode>
+          Kata <BlogCode>Data</BlogCode>
           berdasarkan KBBI berarti:
           <BlogQuote>
             <BlogCode>n</BlogCode> keterangan yang benar dan nyata
@@ -280,9 +297,9 @@ export default function AdakahPemeriksaanPbbP2() {
         </BlogQuote>
         <BlogParagraph>
           Selanjutnya ada frasa <BlogCode>Tidak dibayar</BlogCode> dan{" "}
-          <BlogCode>kurang dibayar</BlogCode>. Arti kata{" "}
+          <BlogCode>kurang dibayar</BlogCode>. Arti frasa{" "}
           <BlogCode>Tidak dibayar</BlogCode> berarti ada sesuatu yang harus
-          dibayar karena suatu hal tapi tidak dibayar sedangkan{" "}
+          dibayar karena suatu hal tapi tidak dibayar sedangkan frasa{" "}
           <BlogCode>kurang dibayar</BlogCode> berarti ada sesuatu yang harus
           dibayar karena suatu hal tapi hanya dibayar sebagian saja sehingga ada
           sisa yang harus dibayar.
@@ -293,10 +310,19 @@ export default function AdakahPemeriksaanPbbP2() {
           cocok dengan klausul diatas?
         </BlogParagraph>
         <BlogH4>Argumen 1</BlogH4>
-        <BlogParagraph>
-          Bisa tuh kalo ada Wajib Pajak yang dia tidak bayar-bayar terus udah
-          tenggat waktu
-        </BlogParagraph>
+        <BlogQuote>
+          <BlogCode>A:</BlogCode>Bisa tuh kalo ada Wajib Pajak PBB-P2 yang dia
+          tidak bayar-bayar terus udah lewat tenggat waktu pembayaran, kita
+          lakukan Pemeriksaan karena kita cek data dan dia belum bayar.
+        </BlogQuote>
+        <BlogQuote>
+          <BlogCode>B:</BlogCode>Ga bisa dong, kalao gitu apa yang mau diuji?
+          itu jelas-jelas palanggaran. Kan kalo nguji itu meriksa yang udah dia
+          lakukan apakah benar-benar sesuai aturan, bukan menindaklanjuti
+          pelanggaran. Bedakan kata menegakan dan menguji. Kalo itu udah ada
+          prosedur di proses penagihan dengan kirim Surat Tagihan Pajak (STP)
+          dan itu urusan Jurusita Pajak bukan Pemeriksa.
+        </BlogQuote>
       </BlogContent>
     </Blog>
   )
