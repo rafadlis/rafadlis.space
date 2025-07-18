@@ -478,7 +478,7 @@ export default function HRMS() {
           <h2 className="text-2xl font-extrabold mt-4 sm:mt-6">
             Cara Kami Mendapat Untung
           </h2>
-          <p className="text-justify mb-6">
+          <p className="text-justify mb-6 mt-2">
             Kami memahami keraguan Anda terhadap harga yang kami tawarkan. Demi
             membangun kepercayaan, kami akan menjelaskan secara transparan
             bagaimana kami dapat memberikan solusi berkualitas tinggi dengan
