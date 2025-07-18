@@ -95,7 +95,40 @@ export default function HRMS() {
           <div className="flex flex-col gap-3 sm:gap-4 mt-4 sm:mt-6">
             <div className="flex flex-col sm:flex-row gap-3">
               <h3 className="mt-1 shrink-0 bg-muted rounded-md border size-8 flex items-center justify-center self-start sm:self-auto">
-                <span>1</span> <span className="sr-only">Analisis</span>
+                <span>1</span>{" "}
+                <span className="sr-only">Interview and Field Visit</span>
+              </h3>
+              <div>
+                <h4 className="font-semibold">
+                  Wawancara & Kunjungan Lapangan
+                </h4>
+                <p className="text-justify text-muted-foreground">
+                  Kami melakukan wawancara mendalam dengan manajemen dan staf
+                  serta kunjungan lapangan untuk memetakan alur kerja secara
+                  detail dan memahami tantangan operasional secara langsung.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <h3 className="mt-1 shrink-0 bg-muted rounded-md border size-8 flex items-center justify-center self-start sm:self-auto">
+                <span>2</span>{" "}
+                <span className="sr-only">
+                  Creating budget plan and contract
+                </span>
+              </h3>
+              <div>
+                <h4 className="font-semibold">Penyusunan Anggaran & Kontrak</h4>
+                <p className="text-justify text-muted-foreground">
+                  Setelah pemahaman terbentuk, kami menyusun proposal anggaran
+                  yang transparan dan kontrak kerja yang fleksibel. Kami
+                  menyediakan opsi pembayaran bertahap untuk membantu manajemen
+                  arus kas Anda.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <h3 className="mt-1 shrink-0 bg-muted rounded-md border size-8 flex items-center justify-center self-start sm:self-auto">
+                <span>3</span> <span className="sr-only">Analisis</span>
               </h3>
               <div>
                 <h4 className="font-semibold">Analisis Mendalam</h4>
@@ -110,7 +143,7 @@ export default function HRMS() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <h3 className="mt-1 shrink-0 bg-muted rounded-md border size-8 flex items-center justify-center self-start sm:self-auto">
-                <span>2</span> <span className="sr-only">Pengembangan</span>
+                <span>4</span> <span className="sr-only">Pengembangan</span>
               </h3>
               <div>
                 <h4 className="font-semibold">Pengembangan & Testing</h4>
@@ -125,7 +158,7 @@ export default function HRMS() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <h3 className="mt-1 shrink-0 bg-muted rounded-md border size-8 flex items-center justify-center self-start sm:self-auto">
-                <span>3</span> <span className="sr-only">Implementasi</span>
+                <span>5</span> <span className="sr-only">Implementasi</span>
               </h3>
               <div>
                 <h4 className="font-semibold">Implementasi & Pendampingan</h4>
