@@ -199,11 +199,85 @@ export default function AdakahPemeriksaanPbbP2() {
           diperiksa oleh Pemeriksa Pajak Daerah?
         </BlogParagraph>
         <BlogQuote>
-          Tidak, Kenapa? kita harus memahami kembali apa itu{" "}
+          Belum tentu, Kenapa? kita harus memahami kembali apa itu{" "}
           <BlogCode>Keterangan Lain</BlogCode>,{" "}
-          <BlogCode>Data Konkret</BlogCode>, dan{" "}
-          <BlogCode>Pajak yang Terutang</BlogCode>.
+          <BlogCode>Data Konkret</BlogCode>,
+          <BlogCode>Pajak yang Terutang</BlogCode>,
+          <BlogCode>Tidak dibayar</BlogCode>, dan
+          <BlogCode>kurang dibayar</BlogCode>.
         </BlogQuote>
+        <BlogParagraph>
+          Frasa dari <BlogCode>Keterangan Lain</BlogCode> memiliki makna yang
+          krusial. Di situ terdapat kata <BlogCode>Lain</BlogCode> yang artinya
+          hal dimaksud bukan sebuah yang utama, yang biasanya, atau umumnya. Di
+          sini kita harus membedakan mana yang disebut{" "}
+          <BlogCode>Keterangan</BlogCode> dan mana yang disebut{" "}
+          <BlogCode>Keterangan Lain</BlogCode>.
+        </BlogParagraph>
+        <BlogParagraph>
+          Lalu ada <BlogCode>Data Konkret</BlogCode>. Frasa tersebut terdiri
+          dari 2 kata yaitu <BlogCode>Data</BlogCode> dan{" "}
+          <BlogCode>Konkret</BlogCode> dimana tidak dijelaskan dalam Pasal 1.
+          Maka dari itu, kita gunakan pengertian pada umumnya atau pengertian
+          yang baku yang secara legal dijelaskan dalam KBBI. Kata{" "}
+          <BlogCode>Data</BlogCode>
+          berdasarkan KBBI berarti:
+          <BlogQuote>
+            <BlogCode>n</BlogCode> keterangan yang benar dan nyata
+          </BlogQuote>
+          <BlogQuote>
+            <BlogCode>n</BlogCode>
+            keterangan atau bahan nyata yang dapat dijadikan dasar kajian
+            (analisis atau kesimpulan)
+          </BlogQuote>
+          <BlogQuote>
+            <BlogCode>n komp</BlogCode>
+            informasi dalam bentuk yang dapat diproses oleh komputer, seperti
+            representasi digital dari teks, angka, gambar grafis, atau suara
+          </BlogQuote>
+        </BlogParagraph>
+        <BlogParagraph>
+          Sedangkan kata <BlogCode>Konkret</BlogCode> berdasarkan KBBI berarti:
+        </BlogParagraph>
+        <BlogQuote>
+          <BlogCode>a</BlogCode>
+          nyata; benar-benar ada (berwujud, dapat dilihat, diraba, dan
+          sebagainya)
+        </BlogQuote>
+        <BlogParagraph>
+          Lalu lanjut ke frasa <BlogCode>Pajak yang Terutang</BlogCode>. kata{" "}
+          <BlogCode>Terutang</BlogCode> dijelaskan dalam pasal 4 ayat (1) PP 35
+          tahun 2023 tentang kentetuan umum pajak dan retribusi daerah yang
+          berbunyi:
+        </BlogParagraph>
+        <BlogQuote>
+          Saat terutang Pajak ditetapkan pada saat orang pribadi atau Badan
+          telah memenuhi syarat subjektif dan objektif atas suatu jenis Pajak
+          dalam 1 (satu) kurun waktu tertentu dalam masa Pajak, dalam Tahun
+          Pajak, atau bagian Tahun Pajak sesuai dengan ketentuan peraturan
+          perundang-undangan mengenai perpajakan Daerah.
+        </BlogQuote>
+        <BlogParagraph>
+          Lalu untuk PBB-P2, pengertian subjeknya dijelaskan dalam Pasal 39 ayat
+          (1) dan objeknya pasal 38 ayat (1) Undang-undang Nomor 1 tahun 2022
+          tentang Hubungan Keuangan Pusat dan Daerah yang secara berurutan
+          berbunyi:
+        </BlogParagraph>
+        <BlogQuote>
+          Subjek Pajak PBB-P2 adalah orang pribadi atau Badan yang secara nyata
+          mempunyai suatu hak atas Bumi dan/atau memperoleh manfaat atas Bumi,
+          dan/atau memiliki, menguasai, dan/ atau memperoleh manfaat atas
+          Bangunan.
+        </BlogQuote>
+        <BlogQuote>
+          Objek PBB-P2 adalah Bumi dan/atau Bangunan yang dimiliki, dikuasai,
+          dan/atau dimanfaatkan oleh orang pribadi atau Badan, kecuali kawasan
+          yang digunakan untuk kegiatan usaha perkebunan, perhutanan, dan
+          pertambangan.
+        </BlogQuote>
+        <BlogParagraph></BlogParagraph>
+        <BlogQuote></BlogQuote>
+        <BlogParagraph></BlogParagraph>
       </BlogContent>
     </Blog>
   )
