@@ -19,6 +19,18 @@ import {
   ChalkboardTeacherIcon,
   ClockIcon,
 } from "@phosphor-icons/react/dist/ssr"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Hotel & Resort Management System",
+  description: "Powerfull and Custom app for hotel and resort",
+  keywords: ["hotel", "resort", "management", "system", "custom", "app"],
+  openGraph: {
+    title: "Hotel & Resort Management System",
+    description: "Custom app for hotel and resort",
+    siteName: "HRMS Brand",
+  },
+}
 
 export default function HRMS() {
   return (
@@ -468,6 +480,127 @@ export default function HRMS() {
               pelatihan, dan support selama 1 tahun. Untuk kebutuhan khusus atau
               kustomisasi tambahan, silakan hubungi kami untuk konsultasi.
             </p>
+          </div>
+        </section>
+        <section>
+          <h2 className="text-2xl font-extrabold mb-3 sm:mb-4">
+            Cara Kami Mendapat Untung
+          </h2>
+          <p className="text-justify mb-6">
+            Kami memahami keraguan Anda terhadap harga yang kami tawarkan. Demi
+            membangun kepercayaan, kami akan menjelaskan secara transparan
+            bagaimana kami dapat memberikan solusi berkualitas tinggi dengan
+            harga yang kompetitif.
+          </p>
+
+          <div className="flex flex-col gap-3 sm:gap-4">
+            <div className="border rounded-lg p-3 sm:p-4 flex flex-row gap-3 items-start">
+              <TargetIcon className="size-6 text-muted-foreground shrink-0 mt-1" />
+              <div>
+                <h3 className="font-semibold">Tim Efisien & Fokus</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Berbeda dengan provider konvensional yang memiliki ratusan
+                  karyawan dengan overhead tinggi, kami menjalankan operasi
+                  dengan tim compact: 2 spesialis bisnis development dan 1
+                  senior developer dengan pengalaman 4+ tahun.
+                </p>
+              </div>
+            </div>
+
+            <div className="border rounded-lg p-3 sm:p-4">
+              <div className="flex flex-row gap-3 items-start mb-3">
+                <ArrowsOutCardinalIcon className="size-6 text-muted-foreground shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold">Model Kerja Fleksibel</h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Beroperasi 100% remote tanpa kantor fisik, menghilangkan
+                    biaya sewa, utilitas, dan overhead operasional yang biasanya
+                    ditanggung klien.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                <div className="border rounded-md p-2 sm:p-3 flex flex-row gap-2 items-center bg-muted/10">
+                  <WrenchIcon className="size-4 text-muted-foreground shrink-0" />
+                  <div>
+                    <p className="text-xs font-medium">Tim Freelance</p>
+                    <p className="text-xs text-muted-foreground">
+                      Berpengalaman dengan fleksibilitas tinggi
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border rounded-md p-2 sm:p-3 flex flex-row gap-2 items-center bg-muted/10">
+                  <HeartIcon className="size-4 text-muted-foreground shrink-0" />
+                  <div>
+                    <p className="text-xs font-medium">Passion Project</p>
+                    <p className="text-xs text-muted-foreground">
+                      Sebagian besar menjalankan sebagai sampingan
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border rounded-md p-2 sm:p-3 flex flex-row gap-2 items-center bg-muted/10">
+                  <TargetIcon className="size-4 text-muted-foreground shrink-0" />
+                  <div>
+                    <p className="text-xs font-medium">Fokus Kualitas</p>
+                    <p className="text-xs text-muted-foreground">
+                      Hasil terbaik, bukan jam kerja konvensional
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border rounded-md p-2 sm:p-3 flex flex-row gap-2 items-center bg-muted/10">
+                  <CurrencyDollarIcon className="size-4 text-muted-foreground shrink-0" />
+                  <div>
+                    <p className="text-xs font-medium">Margin Fleksibel</p>
+                    <p className="text-xs text-muted-foreground">
+                      Tidak bergantung pada keuntungan tinggi
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="border rounded-lg p-3 sm:p-4 flex flex-row gap-3 items-start">
+              <GearIcon className="size-6 text-muted-foreground shrink-0 mt-1" />
+              <div>
+                <h3 className="font-semibold">Teknologi Modern & AI</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Memanfaatkan teknologi terdepan termasuk AI untuk
+                  mengoptimalkan proses development. Memungkinkan pengembangan
+                  aplikasi 3x lebih cepat, sehingga biaya development dapat
+                  ditekan signifikan.
+                </p>
+              </div>
+            </div>
+
+            <div className="border rounded-lg p-3 sm:p-4 flex flex-row gap-3 items-start">
+              <TrendUpIcon className="size-6 text-muted-foreground shrink-0 mt-1" />
+              <div>
+                <h3 className="font-semibold">Infrastruktur Cloud Modern</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Era cloud computing menurunkan drastis biaya server, hosting,
+                  dan infrastruktur IT. Teknologi cloud terbaru memberikan
+                  performa tinggi dengan biaya minimal yang diteruskan kepada
+                  klien.
+                </p>
+              </div>
+            </div>
+
+            <div className="border rounded-lg p-3 sm:p-4 flex flex-row gap-3 items-start bg-muted/20">
+              <HeartIcon className="size-6 text-muted-foreground shrink-0 mt-1" />
+              <div>
+                <h3 className="font-semibold">Komitmen Kualitas</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Harga rendah bukan berarti kualitas rendah. Dengan efisiensi
+                  operasional dan teknologi modern, kami memberikan solusi
+                  enterprise-grade dengan investasi yang masuk akal untuk hotel
+                  Anda.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </article>
