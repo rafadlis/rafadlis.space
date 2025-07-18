@@ -352,7 +352,7 @@ export default function HRMS() {
                           Description
                         </TableHead>
                         <TableHead className="w-1/6 text-right text-muted-foreground min-w-[80px]">
-                          Price (Rp)
+                          Price (Rp)*
                         </TableHead>
                         <TableHead className="w-1/6 text-muted-foreground min-w-[70px]">
                           Payment
@@ -428,7 +428,7 @@ export default function HRMS() {
                           pegawai seperti notif kamar vacant ke Housekeeping
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
-                          *1,000,000
+                          **1,000,000
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
                           / 1,000 notif
@@ -465,7 +465,8 @@ export default function HRMS() {
                     </TableBody>
                     <TableCaption>
                       <p className="text-left px-2">
-                        *Harga tergantung dari Meta (Facebook) dan kurs USD
+                        *Harga tidak baku, masih bisa di diskusikan <br />
+                        **Harga tergantung dari Meta (Facebook) dan kurs USD
                       </p>
                     </TableCaption>
                   </Table>
@@ -473,17 +474,9 @@ export default function HRMS() {
               </div>
             </div>
           </div>
-
-          <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-muted/20 rounded-lg">
-            <p className="text-sm text-muted-foreground">
-              <strong>Note:</strong> Harga sudah termasuk implementasi,
-              pelatihan, dan support selama 1 tahun. Untuk kebutuhan khusus atau
-              kustomisasi tambahan, silakan hubungi kami untuk konsultasi.
-            </p>
-          </div>
         </section>
         <section>
-          <h2 className="text-2xl font-extrabold mb-3 sm:mb-4">
+          <h2 className="text-2xl font-extrabold mt-4 sm:mt-6">
             Cara Kami Mendapat Untung
           </h2>
           <p className="text-justify mb-6">
