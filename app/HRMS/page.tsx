@@ -19,8 +19,9 @@ import {
   ChalkboardTeacherIcon,
   ClockIcon,
 } from "@phosphor-icons/react/dist/ssr"
-import { Metadata } from "next"
+import Metadata from "next"
 import { LogoIcon } from "./_components/tirta-kencana-logo"
+import { TermsAndConditions } from "./_components/terms-and-conditions"
 
 export const metadata: Metadata = {
   title: "Hotel & Resort Management System",
@@ -494,6 +495,21 @@ export default function HRMS() {
                           1x
                         </TableCell>
                       </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium whitespace-normal">
+                          Penyerahan Source Code
+                        </TableCell>
+                        <TableCell className="whitespace-normal">
+                          Penyerahan seluruh kode sumber aplikasi untuk dikelola
+                          secara mandiri oleh Klien.
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          Kesepakatan
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          1x
+                        </TableCell>
+                      </TableRow>
                     </TableBody>
                     <TableCaption>
                       <p className="text-left px-2">
@@ -628,6 +644,7 @@ export default function HRMS() {
             </div>
           </div>
         </section>
+        <TermsAndConditions />
       </article>
     </main>
   )
