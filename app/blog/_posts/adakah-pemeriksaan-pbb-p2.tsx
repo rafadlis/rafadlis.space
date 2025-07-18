@@ -317,8 +317,8 @@ export default function AdakahPemeriksaanPbbP2() {
         </BlogQuote>
         <BlogQuote>
           <BlogCode>B:</BlogCode>Ga bisa dong, kalao gitu apa yang mau diuji?
-          itu jelas-jelas palanggaran. Kan kalo nguji itu meriksa yang udah dia
-          lakukan apakah benar-benar sesuai aturan, bukan menindaklanjuti
+          itu jelas-jelas palanggaran WP. Kan kalo nguji itu meriksa yang udah
+          WP lakukan apakah benar-benar sesuai aturan, bukan menindaklanjuti
           pelanggaran. Bedakan kata menegakan dan menguji. Kalo itu udah ada
           prosedur di proses penagihan dengan kirim Surat Tagihan Pajak (STP)
           dan itu urusan Jurusita Pajak bukan Pemeriksa.
