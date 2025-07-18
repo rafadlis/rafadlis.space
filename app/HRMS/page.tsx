@@ -20,6 +20,7 @@ import {
   ClockIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import { Metadata } from "next"
+import { LogoIcon } from "./_components/tirta-kencana-logo"
 
 export const metadata: Metadata = {
   title: "Hotel & Resort Management System",
@@ -179,9 +180,7 @@ export default function HRMS() {
         <section className="mt-6 sm:mt-8">
           <h2 className="text-2xl font-extrabold mb-3 sm:mb-4">Trusted by</h2>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 p-3 sm:p-4 border rounded-lg">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-muted-foreground/30 shrink-0">
-              <span className="text-xs text-muted-foreground">Logo</span>
-            </div>
+            <LogoIcon className="w-12 h-12 shrink-0 sm:h-16 sm:w-16" />
             <div>
               <h3 className="text-lg font-semibold">
                 Tirta Kencana Hotel & Resort
