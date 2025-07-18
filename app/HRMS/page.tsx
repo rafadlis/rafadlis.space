@@ -194,7 +194,7 @@ export default function HRMS() {
               <h3 className="font-semibold mb-2 sm:mb-3">
                 Harga Tawaran Dasar
               </h3>
-              <div className="border rounded-lg overflow-hidden">
+              <div className="border rounded-lg overflow-hidden pb-4">
                 <div className="overflow-x-auto">
                   <Table>
                     <TableHeader>
@@ -328,7 +328,7 @@ export default function HRMS() {
                 kapan saja setelah implementasi sistem utama, tidak ada batasan
                 waktu.
               </p>
-              <div className="border rounded-lg overflow-hidden">
+              <div className="border rounded-lg overflow-hidden pb-4">
                 <div className="overflow-x-auto">
                   <Table>
                     <TableHeader>
@@ -408,7 +408,7 @@ export default function HRMS() {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell className="whitespace-normal">
+                        <TableCell className="whitespace-normal font-medium">
                           WhatsApp Notif
                         </TableCell>
                         <TableCell className="whitespace-normal">
@@ -416,7 +416,7 @@ export default function HRMS() {
                           pegawai seperti notif kamar vacant ke Housekeeping
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
-                          1,000,000
+                          *1,000,000
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
                           / 1,000 notif
@@ -451,6 +451,11 @@ export default function HRMS() {
                         </TableCell>
                       </TableRow>
                     </TableBody>
+                    <TableCaption>
+                      <p className="text-left px-2">
+                        *Harga tergantung dari Meta (Facebook) dan kurs USD
+                      </p>
+                    </TableCaption>
                   </Table>
                 </div>
               </div>
