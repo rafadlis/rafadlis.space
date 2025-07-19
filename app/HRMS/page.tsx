@@ -18,6 +18,7 @@ import {
   GearIcon,
   ChalkboardTeacherIcon,
   ClockIcon,
+  Question,
 } from "@phosphor-icons/react/dist/ssr"
 import type { Metadata } from "next"
 import Image from "next/image"
@@ -186,12 +187,13 @@ export default function HRMS() {
                 <span>4</span> <span className="sr-only">Pengembangan</span>
               </h3>
               <div>
-                <h4 className="font-semibold">Pengembangan & Testing</h4>
+                <h4 className="font-semibold">Pengembangan Cepat & Iteratif</h4>
                 <p className="text-justify text-muted-foreground">
-                  Membangun sistem dengan pendekatan <em>agile development</em>{" "}
-                  - pengembangan iteratif dengan testing langsung bersama tim
-                  hotel. Setiap fitur yang dikembangkan langsung diuji dan
-                  disesuaikan berdasarkan feedback real-time dari pengguna.
+                  Dengan pendekatan <em>agile</em>, kami membangun sistem
+                  fungsional yang siap digunakan untuk operasional inti dalam{" "}
+                  <strong>1-2 bulan pertama</strong>. Proses ini berjalan sambil
+                  mendampingi tim hotel, memungkinkan testing langsung dan
+                  penyesuaian berdasarkan feedback real-time.
                 </p>
               </div>
             </div>
@@ -201,12 +203,14 @@ export default function HRMS() {
                 <span>5</span> <span className="sr-only">Implementasi</span>
               </h3>
               <div>
-                <h4 className="font-semibold">Implementasi & Pendampingan</h4>
+                <h4 className="font-semibold">Implementasi & Penyempurnaan</h4>
                 <p className="text-justify text-muted-foreground">
-                  Go-live dengan pendampingan intensif dari tim ahli. Monitoring
-                  kinerja sistem 24/7, troubleshooting cepat, dan pengembangan
-                  berkelanjutan sesuai kebutuhan yang berkembang. Komitmen penuh
-                  untuk kesuksesan jangka panjang hotel Anda.
+                  Setelah sistem inti berjalan, <strong>bulan ketiga</strong>{" "}
+                  didedikasikan untuk penyempurnaan (perfection). Kami melakukan
+                  pendampingan intensif, memoles setiap detail berdasarkan
+                  penggunaan nyata, dan memastikan sistem benar-benar menyatu
+                  dengan alur kerja unik hotel Anda untuk kesuksesan jangka
+                  panjang.
                 </p>
               </div>
             </div>
@@ -264,11 +268,12 @@ export default function HRMS() {
             </div>
           </div>
           <div className="mt-4 border-l-4 border-muted pl-4 italic text-muted-foreground">
-            <blockquote className="text-justify">
-              Kami benar-benar terbantu Sangat direkomendasikan!&rdquo;
+            <blockquote className="text-justify text-foreground not-italic">
+              sangat membantu, mempermudah proses check in, pokona mah the best
+              wkwk hidup aplikasi 😂
             </blockquote>
-            <footer className="mt-2 font-semibold not-italic text-foreground">
-              — Artini, Petugas Resepsionist Tirta Kencana
+            <footer className="mt-2">
+              — Artini & Dentia, Petugas Resepsionist Tirta Kencana
             </footer>
           </div>
 
@@ -385,9 +390,11 @@ export default function HRMS() {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell>Training Pegawai</TableCell>
+                        <TableCell className="font-medium whitespace-normal">
+                          Training Pegawai
+                        </TableCell>
                         <TableCell className="whitespace-normal">
-                          Pelatihan langsung di hotel sambil bekerja selam 3
+                          Pelatihan langsung di hotel sambil bekerja selama 3
                           bulan
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
@@ -398,7 +405,9 @@ export default function HRMS() {
                         </TableCell>
                       </TableRow>
                       <TableRow>
-                        <TableCell>Server & Hosting**</TableCell>
+                        <TableCell className="font-medium whitespace-normal">
+                          Server & Hosting**
+                        </TableCell>
                         <TableCell className="whitespace-normal">
                           Biaya tahunan server agar bisa online
                         </TableCell>
@@ -708,6 +717,171 @@ export default function HRMS() {
                   operasional dan teknologi modern, kami memberikan solusi
                   enterprise-grade dengan investasi yang masuk akal untuk hotel
                   Anda.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="mt-8 sm:mt-12">
+          <h2 className="text-2xl font-extrabold mb-6">
+            Pertanyaan yang Sering Diajukan (FAQ)
+          </h2>
+          <div className="space-y-8">
+            <div className="flex flex-row gap-4 items-start">
+              <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground mt-1">
+                <Question weight="bold" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">
+                  Kami sudah punya sistem yang berjalan, walaupun semi-manual.
+                  Seberapa besar potensi gangguan pada operasional harian kami
+                  selama proses transisi?
+                </h3>
+                <p className="mt-2 text-muted-foreground text-justify">
+                  Ini adalah kekhawatiran yang sangat valid dan menjadi
+                  prioritas utama kami. Metodologi kami dirancang untuk{" "}
+                  <strong>implementasi bertahap (phased implementation)</strong>
+                  . Kami tidak akan mengganti semua sistem Anda dalam satu
+                  malam. Kita mulai dengan modul yang paling tidak disruptif,
+                  menjalankannya secara paralel dengan sistem lama Anda, dan
+                  hanya beralih sepenuhnya ketika tim Anda sudah 100% nyaman dan
+                  terlatih. Tujuannya adalah <strong>zero downtime</strong>{" "}
+                  untuk operasional hotel Anda.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4 items-start">
+              <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground mt-1">
+                <Question weight="bold" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">
+                  Staf kami usianya beragam dan tidak semuanya mahir teknologi.
+                  Apakah sistem ini akan sulit dipelajari dan malah memperlambat
+                  kerja mereka?
+                </h3>
+                <p className="mt-2 text-muted-foreground text-justify">
+                  Justru sebaliknya, dan inilah keunggulan utama kami. Kami
+                  menerapkan pendekatan{" "}
+                  <strong>User Experience (UX) Driven</strong>, yang artinya
+                  kami membangun sistem berdasarkan alur kerja alami staf Anda,
+                  bukan memaksa mereka belajar alur kerja baru yang rumit.
+                  Selama fase analisis, kami akan memetakan cara kerja tim Anda
+                  dan merancang antarmuka yang intuitif dan mudah digunakan.
+                  Kami juga menyediakan{" "}
+                  <strong>pendampingan intensif selama 3 bulan</strong> di mana
+                  tim kami akan melatih dan membantu staf Anda secara langsung
+                  hingga mereka mahir.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4 items-start">
+              <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground mt-1">
+                <Question weight="bold" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">
+                  Hotel kami adalah boutique hotel dengan banyak permintaan unik
+                  dari tamu. Bisakah sistem ini benar-benar disesuaikan, atau
+                  ini hanya template yang sedikit dimodifikasi?
+                </h3>
+                <p className="mt-2 text-muted-foreground text-justify">
+                  Kami tidak menjual produk jadi (off-the-shelf). Apa yang kami
+                  tawarkan adalah{" "}
+                  <strong>kerangka kerja (framework) yang fleksibel</strong> dan
+                  layanan pengembangan khusus. Proses kami dimulai dengan
+                  wawancara mendalam untuk memahami SOP dan
+                  &ldquo;keunikan&rdquo; hotel Anda. Sebagai contoh, jika Anda
+                  memiliki paket spa khusus yang terintegrasi dengan reservasi
+                  kamar, atau sistem poin loyalitas yang unik, kami akan
+                  membangun fitur tersebut dari awal agar sesuai persis dengan
+                  kebutuhan Anda. Anda tidak membayar untuk template, Anda
+                  berinvestasi dalam solusi yang dibuat khusus.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4 items-start">
+              <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground mt-1">
+                <Question weight="bold" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">
+                  Keamanan data tamu dan finansial adalah segalanya bagi kami.
+                  Bagaimana jaminan keamanan yang Anda berikan, terutama jika
+                  kami menggunakan server yang Anda sediakan?
+                </h3>
+                <p className="mt-2 text-muted-foreground text-justify">
+                  Kami sangat serius dalam hal keamanan. Jika Anda menggunakan
+                  infrastruktur cloud kami, kami menerapkan standar keamanan
+                  berlapis: enkripsi data end-to-end, firewall, backup otomatis
+                  berkala, dan otentikasi multi-faktor untuk akses staf. Kami
+                  menggunakan penyedia cloud terkemuka yang sudah memiliki
+                  sertifikasi keamanan internasional. Jika Anda memilih untuk
+                  menggunakan server sendiri, kami akan memberikan panduan
+                  best-practice untuk konfigurasi keamanan dan bekerja sama
+                  dengan tim IT Anda untuk memastikan semuanya aman.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4 items-start">
+              <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground mt-1">
+                <Question weight="bold" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">
+                  Harga yang ditawarkan memang menarik. Tapi apa saja
+                  &apos;biaya tersembunyi&apos; yang mungkin muncul? Bagaimana
+                  dengan biaya maintenance atau update di masa depan?
+                </h3>
+                <p className="mt-2 text-muted-foreground text-justify">
+                  Transparansi adalah kunci. Biaya yang tertera di proposal
+                  adalah biaya yang Anda bayar.{" "}
+                  <strong>
+                    Tidak ada biaya maintenance bulanan atau tahunan
+                  </strong>{" "}
+                  untuk sistem dasar yang sudah Anda beli (selain biaya server
+                  tahunan jika Anda hosting dengan kami). Pembaruan untuk
+                  perbaikan bug atau keamanan kami berikan secara gratis. Biaya
+                  tambahan hanya akan muncul jika Anda secara spesifik meminta{" "}
+                  <strong>penambahan modul atau fitur baru (Add-On)</strong> di
+                  luar lingkup yang telah disepakati, dan itu pun akan kami
+                  ajukan dalam proposal terpisah untuk persetujuan Anda terlebih
+                  dahulu.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-row gap-4 items-start">
+              <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground mt-1">
+                <Question weight="bold" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">
+                  Proyek kustom biasanya memakan waktu 6-12 bulan. Bagaimana
+                  Anda bisa menghasilkan sistem yang stabil dan sesuai kebutuhan
+                  hanya dalam 1-3 bulan?
+                </h3>
+                <p className="mt-2 text-muted-foreground text-justify">
+                  Pertanyaan ini sangat tepat dan menyoroti perbedaan
+                  fundamental metodologi kami. Kami tidak menghilang selama
+                  berbulan-bulan untuk development. Sebaliknya, kami menerapkan
+                  pendekatan{" "}
+                  <strong>agile dan iteratif langsung di lokasi</strong>,
+                  ditambah dengan pemanfaatan{" "}
+                  <strong>teknologi AI untuk akselerasi development</strong>.
+                  Sistem yang fungsional dan dapat digunakan untuk operasional
+                  inti sudah siap dalam <strong>1-2 bulan pertama</strong>. Ini
+                  bisa tercapai karena kami membangunnya sambil mendampingi tim
+                  hotel, mendapatkan feedback instan, dan melakukan penyesuaian
+                  secara real-time. <strong>Bulan ketiga</strong> kami
+                  dedikasikan untuk proses{" "}
+                  <strong>penyempurnaan (perfection)</strong>, memoles setiap
+                  detail berdasarkan penggunaan nyata oleh staf Anda, hingga
+                  sistem benar-benar menyatu dengan alur kerja hotel.
                 </p>
               </div>
             </div>
