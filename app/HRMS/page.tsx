@@ -272,12 +272,12 @@ export default function HRMS() {
             </footer>
           </div>
 
-          <div className="mt-6 print:hidden">
+          <div className="mt-6">
             <div className="grid grid-cols-1 gap-4">
               {galleryImages.map((image) => (
                 <div
                   key={image.src}
-                  className="border rounded-lg overflow-hidden group"
+                  className="border rounded-lg overflow-hidden group print:break-inside-avoid"
                 >
                   <Image
                     src={image.src}
