@@ -19,7 +19,7 @@ import {
   ChalkboardTeacherIcon,
   ClockIcon,
 } from "@phosphor-icons/react/dist/ssr"
-import Metadata from "next"
+import type { Metadata } from "next"
 import { LogoIcon } from "./_components/tirta-kencana-logo"
 import { TermsAndConditions } from "./_components/terms-and-conditions"
 
