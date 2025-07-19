@@ -20,6 +20,7 @@ import {
   ClockIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import type { Metadata } from "next"
+import Image from "next/image"
 import { LogoIcon } from "./_components/tirta-kencana-logo"
 import { TermsAndConditions } from "./_components/terms-and-conditions"
 
@@ -35,6 +36,44 @@ export const metadata: Metadata = {
 }
 
 export default function HRMS() {
+  const galleryImages = [
+    {
+      src: "/app-tirtakencana/01-front-office-main-page.png",
+      alt: "Tampilan utama Front Office dengan ringkasan status kamar dan aktivitas.",
+    },
+    {
+      src: "/app-tirtakencana/02-front-office-billing.png",
+      alt: "Antarmuka Billing yang terintegrasi untuk pengelolaan tagihan tamu.",
+    },
+    {
+      src: "/app-tirtakencana/03-front-office-calendar.png",
+      alt: "Tampilan kalender interaktif untuk manajemen reservasi dan ketersediaan kamar.",
+    },
+    {
+      src: "/app-tirtakencana/04-front-office-walk-in-form.png",
+      alt: "Formulir digital untuk proses check-in tamu walk-in yang cepat.",
+    },
+    {
+      src: "/app-tirtakencana/05-front-office-multi-rooms.png",
+      alt: "Fitur untuk menangani pemesanan beberapa kamar dalam satu transaksi.",
+    },
+    {
+      src: "/app-tirtakencana/06-front-office-guest-detail.png",
+      alt: "Halaman detail tamu dengan riwayat lengkap dan preferensi.",
+    },
+    {
+      src: "/app-tirtakencana/07-owner-main-page.png",
+      alt: "Dashboard khusus untuk pemilik dengan laporan dan insight bisnis.",
+    },
+    {
+      src: "/app-tirtakencana/08-back-office-laporan-piutang.png",
+      alt: "Laporan piutang terperinci untuk back-office.",
+    },
+    {
+      src: "/app-tirtakencana/09-back-office-laporan-harian.png",
+      alt: "Laporan pendapatan harian yang dihasilkan secara otomatis.",
+    },
+  ]
   return (
     <main className="min-h-screen w-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
       <article className="max-w-prose w-full flex flex-col gap-4 sm:gap-6 py-8 sm:py-12">
@@ -222,6 +261,36 @@ export default function HRMS() {
               <p className="text-sm text-muted-foreground">
                 Custom management system for streamlined hotel operations
               </p>
+            </div>
+          </div>
+          <div className="mt-4 border-l-4 border-muted pl-4 italic text-muted-foreground">
+            <blockquote className="text-justify">
+              Kami benar-benar terbantu Sangat direkomendasikan!&rdquo;
+            </blockquote>
+            <footer className="mt-2 font-semibold not-italic text-foreground">
+              — Artini, Petugas Resepsionist Tirta Kencana
+            </footer>
+          </div>
+
+          <div className="mt-6 print:hidden">
+            <div className="grid grid-cols-1 gap-4">
+              {galleryImages.map((image) => (
+                <div
+                  key={image.src}
+                  className="border rounded-lg overflow-hidden group"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={1280}
+                    height={720}
+                    className="w-full h-auto group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <p className="p-3 text-xs text-muted-foreground">
+                    {image.alt}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
