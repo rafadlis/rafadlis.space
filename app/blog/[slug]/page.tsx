@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps) {
     slug: post.slug,
     publishedAt: post.publishedAt,
     category: post.category,
-    tags: [post.category.toLowerCase().replace(" ", "-")],
+    tags: [post.category.toLowerCase().replace(/ /g, "-")],
     excerpt: post.description,
   })
 }
