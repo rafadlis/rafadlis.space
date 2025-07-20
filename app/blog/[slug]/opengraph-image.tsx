@@ -17,7 +17,9 @@ export const alt = "Blog Post by Rafadlis"
 
 export default async function Image({ params }: Props) {
   const { slug } = await params
-  const post = blogs.find((blog) => blog.slug === slug)
+  const post = blogs.find(
+    (blog) => blog.slug === slug && blog.status === "published"
+  )
 
   if (!post) {
     return createOGImage(

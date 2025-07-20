@@ -17,7 +17,13 @@ export const alt = "Project by Rafadlis"
 
 export default async function Image({ params }: Props) {
   const { slug } = await params
-  const project = projects.find((p) => p.slug === slug)
+  const project = projects.find(
+    (p) =>
+      p.slug === slug &&
+      (p.status === "completed" ||
+        p.status === "in-progress" ||
+        p.status === "growing")
+  )
 
   if (!project) {
     return createOGImage(
