@@ -13,21 +13,7 @@ interface Props {
   params: Promise<{ slug: string }>
 }
 
-export async function generateImageMetadata({ params }: Props) {
-  const { slug } = await params
-  const post = blogs.find((blog) => blog.slug === slug)
-
-  return [
-    {
-      id: slug,
-      alt: post
-        ? `${post.title} - Blog Post by Rafadlis`
-        : "Blog Post by Rafadlis",
-      contentType: "image/png",
-      size: { width: 1200, height: 630 },
-    },
-  ]
-}
+export const alt = "Blog Post by Rafadlis"
 
 export default async function Image({ params }: Props) {
   const { slug } = await params
