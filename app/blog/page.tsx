@@ -17,6 +17,14 @@ import {
 import { BlogTable } from "./_components/blog-table"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { generatePageMetadata } from "@/lib/seo"
+
+export const metadata = generatePageMetadata({
+  title: "Blog",
+  description:
+    "Explore my thoughts and insights on software development, UX design, data science, statistics, accounting, and technology. A collection of tutorials, experiences, and lessons learned.",
+  path: "/blog",
+})
 
 export default function BlogPage() {
   return (
