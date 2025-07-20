@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next"
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://rafadlis.space"
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rafadlis.space"
 
   return {
     rules: [
@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
           "/admin/",
           "/_next/",
           "/private/",
-          "/*.json$",
+          "/*.json",
           "/loading",
           "/error",
         ],
