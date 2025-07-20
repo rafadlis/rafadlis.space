@@ -20,9 +20,7 @@ export default async function Image({ params }: Props) {
   const project = projects.find(
     (p) =>
       p.slug === slug &&
-      (p.status === "completed" ||
-        p.status === "in-progress" ||
-        p.status === "growing")
+      (p.status === "completed" || p.status === "in-progress")
   )
 
   if (!project) {
