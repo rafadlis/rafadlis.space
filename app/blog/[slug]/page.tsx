@@ -33,8 +33,12 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
-  const { default: Post } = await import(`../_posts/${slug}.tsx`)
-  return <Post />
+  try {
+    const { default: Post } = await import(`../_posts/${slug}.tsx`)
+    return <Post />
+  } catch {
+    notFound()
+  }
 }
 
 export function generateStaticParams() {
