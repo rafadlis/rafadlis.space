@@ -404,38 +404,122 @@ export default function HRMS() {
                           1x
                         </TableCell>
                       </TableRow>
-                      <TableRow>
-                        <TableCell className="font-medium whitespace-normal">
-                          Server & Hosting**
-                        </TableCell>
-                        <TableCell className="whitespace-normal">
-                          Biaya tahunan server agar bisa online
-                        </TableCell>
-                        <TableCell className="text-right whitespace-nowrap font-mono">
-                          3,000,000
-                        </TableCell>
-                        <TableCell className="text-right font-mono">
-                          / tahun
-                        </TableCell>
-                      </TableRow>
                       <TableRow className="bg-muted/20">
                         <TableCell className="font-bold whitespace-normal">
-                          Total
+                          Total Biaya Software
                         </TableCell>
-                        <TableCell className="font-medium whitespace-normal"></TableCell>
-                        <TableCell className="text-right whitespace-nowrap font-mono">
-                          33,000,000
+                        <TableCell className="font-medium whitespace-normal">
+                          Belum termasuk server & hosting
                         </TableCell>
                         <TableCell className="text-right whitespace-nowrap font-mono">
-                          / pertama
+                          30,000,000
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          1x Bayar
                         </TableCell>
                       </TableRow>
                     </TableBody>
                     <TableCaption>
                       <p className="text-left px-2">
-                        *Harga flexible, masih bisa di diskusikan <br />
-                        **Server ini optional, tapi direkomendasikan menggunakan
-                        server
+                        *Harga flexible, masih bisa di diskusikan
+                      </p>
+                    </TableCaption>
+                  </Table>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 sm:mt-8">
+              <h3 className="font-semibold mb-2 sm:mb-3">
+                Opsi Server & Hosting (Biaya Tahunan)
+              </h3>
+              <p className="mb-4 text-justify text-muted-foreground">
+                Server bersifat opsional namun sangat direkomendasikan agar
+                aplikasi dapat diakses secara online. Kami menyediakan pilihan
+                server cloud dengan performa handal yang dapat disesuaikan
+                dengan skala operasional hotel Anda. Klien juga memiliki
+                fleksibilitas untuk menggunakan server pribadi jika diinginkan.
+              </p>
+              <div className="border rounded-lg overflow-hidden pb-4">
+                <div className="overflow-x-auto">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="w-[150px]">Paket</TableHead>
+                        <TableHead>Spesifikasi</TableHead>
+                        <TableHead className="text-right">
+                          Harga (Rp)*
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      <TableRow>
+                        <TableCell className="font-medium">Light</TableCell>
+                        <TableCell>
+                          <ul className="space-y-1 text-sm text-muted-foreground">
+                            <li>1 vCPU Core</li>
+                            <li>4 GB RAM</li>
+                            <li>50 GB NVMe Disk Space</li>
+                            <li>4 TB Bandwidth</li>
+                            <li>1 Snapshot</li>
+                          </ul>
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          2,000,000
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Standard</TableCell>
+                        <TableCell>
+                          <ul className="space-y-1 text-sm text-muted-foreground">
+                            <li>2 vCPU Core</li>
+                            <li>8 GB RAM</li>
+                            <li>100 GB NVMe Disk Space</li>
+                            <li>8 TB Bandwidth</li>
+                            <li>1 Snapshot</li>
+                          </ul>
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          3,000,000
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">Premium</TableCell>
+                        <TableCell>
+                          <ul className="space-y-1 text-sm text-muted-foreground">
+                            <li>4 vCPU Core</li>
+                            <li>16 GB RAM</li>
+                            <li>200 GB NVMe Disk Space</li>
+                            <li>16 TB Bandwidth</li>
+                            <li>1 Snapshot</li>
+                          </ul>
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          4,200,000
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell className="font-medium">
+                          Enterprise
+                        </TableCell>
+                        <TableCell>
+                          <ul className="space-y-1 text-sm text-muted-foreground">
+                            <li>8 vCPU Core</li>
+                            <li>32 GB RAM</li>
+                            <li>400 GB NVMe Disk Space</li>
+                            <li>32 TB Bandwidth</li>
+                            <li>1 Snapshot</li>
+                          </ul>
+                        </TableCell>
+                        <TableCell className="text-right whitespace-nowrap font-mono">
+                          8,000,000
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                    <TableCaption>
+                      <p className="text-left px-2">
+                        *Harga untuk perpanjangan tahunan. Spesifikasi dapat
+                        disesuaikan.
                       </p>
                     </TableCaption>
                   </Table>
