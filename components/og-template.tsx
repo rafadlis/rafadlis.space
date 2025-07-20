@@ -36,7 +36,8 @@ export function OGTemplate({
         display: "flex",
         flexDirection: "column",
         padding: "80px",
-        fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
+        fontFamily:
+          '"Roboto", "Inter", -apple-system, BlinkMacSystemFont, sans-serif',
       }}
     >
       {/* Header with Logo */}
@@ -54,17 +55,17 @@ export function OGTemplate({
           style={{
             width: "80px",
             height: "80px",
-            backgroundColor: gradient ? "rgba(255,255,255,0.2)" : "#f1f5f9",
+            backgroundColor: gradient ? "rgba(255,255,255,0.2)" : "#09090b",
             borderRadius: "20px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             fontSize: "32px",
             fontWeight: "700",
-            color: gradient ? "white" : "#0a0a0a",
+            color: gradient ? "white" : "#fafafa",
           }}
         >
-          R
+          r.
         </div>
 
         {/* Decorative Pattern */}
