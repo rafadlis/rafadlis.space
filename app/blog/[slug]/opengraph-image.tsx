@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/og"
+import { createOGImage } from "@/lib/og-utils"
 import { OGTemplate } from "@/components/og-template"
 import { blogs } from "@/lib/data-blog"
 
@@ -20,15 +20,13 @@ export default async function Image({ params }: Props) {
   const post = blogs.find((blog) => blog.slug === slug)
 
   if (!post) {
-    return new ImageResponse(
-      (
-        <OGTemplate
-          title="Blog Post Not Found"
-          subtitle="Blog - Rafadlis"
-          type="blog"
-        />
-      ),
-      { ...size }
+    return createOGImage(
+      <OGTemplate
+        title="Blog Post Not Found"
+        subtitle="Blog - Rafadlis"
+        type="blog"
+      />,
+      size
     )
   }
 
@@ -36,14 +34,12 @@ export default async function Image({ params }: Props) {
   const displayTitle =
     post.title.length > 60 ? `${post.title.substring(0, 57)}...` : post.title
 
-  return new ImageResponse(
-    (
-      <OGTemplate
-        title={displayTitle}
-        subtitle={`${post.category} - Rafadlis Blog`}
-        type="blog"
-      />
-    ),
-    { ...size }
+  return createOGImage(
+    <OGTemplate
+      title={displayTitle}
+      subtitle={`${post.category} - Rafadlis Blog`}
+      type="blog"
+    />,
+    size
   )
 }

@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/og"
+import { createOGImage } from "@/lib/og-utils"
 import { OGTemplate } from "@/components/og-template"
 
 export const runtime = "edge"
@@ -10,16 +10,12 @@ export const size = {
 export const contentType = "image/png"
 
 export default async function Image() {
-  return new ImageResponse(
-    (
-      <OGTemplate
-        title="Rafadlis | Crafter"
-        subtitle="Software Engineer & UX Designer"
-        type="website"
-      />
-    ),
-    {
-      ...size,
-    }
+  return createOGImage(
+    <OGTemplate
+      title="Rafadlis | Crafter"
+      subtitle="Software Engineer & UX Designer"
+      type="website"
+    />,
+    size
   )
 }

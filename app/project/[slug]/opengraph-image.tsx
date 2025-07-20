@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/og"
+import { createOGImage } from "@/lib/og-utils"
 import { OGTemplate } from "@/components/og-template"
 import { projects } from "@/lib/data-project"
 
@@ -20,15 +20,13 @@ export default async function Image({ params }: Props) {
   const project = projects.find((p) => p.slug === slug)
 
   if (!project) {
-    return new ImageResponse(
-      (
-        <OGTemplate
-          title="Project Not Found"
-          subtitle="Portfolio - Rafadlis"
-          type="project"
-        />
-      ),
-      { ...size }
+    return createOGImage(
+      <OGTemplate
+        title="Project Not Found"
+        subtitle="Portfolio - Rafadlis"
+        type="project"
+      />,
+      size
     )
   }
 
@@ -41,15 +39,13 @@ export default async function Image({ params }: Props) {
   // Get main technology for subtitle
   const mainTech = project.tech[0]?.name || project.category
 
-  return new ImageResponse(
-    (
-      <OGTemplate
-        title={displayTitle}
-        subtitle={`${mainTech} - Rafadlis Portfolio`}
-        type="project"
-        gradient={project.status === "completed"}
-      />
-    ),
-    { ...size }
+  return createOGImage(
+    <OGTemplate
+      title={displayTitle}
+      subtitle={`${mainTech} - Rafadlis Portfolio`}
+      type="project"
+      gradient={project.status === "completed"}
+    />,
+    size
   )
 }

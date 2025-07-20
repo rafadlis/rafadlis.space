@@ -36,8 +36,7 @@ export function OGTemplate({
         display: "flex",
         flexDirection: "column",
         padding: "80px",
-        fontFamily:
-          '"Roboto", "Inter", -apple-system, BlinkMacSystemFont, sans-serif',
+        fontFamily: '"Roboto", -apple-system, BlinkMacSystemFont, sans-serif',
       }}
     >
       {/* Header with Logo */}
