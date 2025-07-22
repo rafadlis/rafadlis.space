@@ -43,7 +43,6 @@ const siteConfig = {
     "Rafadlis",
     "R. Rahmat Fadli Sadikin",
     "rafadlis space",
-    "rafadlis space",
     "Software Engineer",
     "UX Designer",
     "Web Developer",
