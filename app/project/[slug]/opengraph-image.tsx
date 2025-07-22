@@ -14,7 +14,17 @@ export const contentType = "image/png"
 
 // Image generation
 export default async function Image({ params }: { params: { slug: string } }) {
-  const project = getProjectData(params.slug)
+  let project
+
+  try {
+    project = getProjectData(params.slug)
+  } catch {
+    project = {
+      name: "Project Not Found",
+      description: "The requested project could not be found.",
+    }
+  }
+
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   // Font
   const robotoRegular = fetch(`${siteUrl}/Roboto-Regular.ttf`).then((res) =>
