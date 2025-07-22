@@ -61,12 +61,12 @@ export default async function Image() {
           >
             r.
           </div>
-          {/* <div style={{ fontSize: 128, fontWeight: 700, color: blackColor }}>
+          <div style={{ fontSize: 128, fontWeight: 700, color: blackColor }}>
             Project by Rafadlis
           </div>
           <div style={{ fontSize: 24, fontWeight: 400, color: blackColor }}>
             https://rafadlis.space/project
-          </div> */}
+          </div>
         </div>
       </div>
     ),
