@@ -1,15 +1,19 @@
 "use client"
 
 import {
-  flexRender,
-  getCoreRowModel,
-  getSortedRowModel,
-  useReactTable,
-  getPaginationRowModel,
-  getFilteredRowModel,
   ColumnFiltersState,
   SortingState,
+  flexRender,
+  getCoreRowModel,
+  getFacetedRowModel,
+  getFacetedUniqueValues,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  useReactTable,
 } from "@tanstack/react-table"
+import * as React from "react"
+
 import {
   Table,
   TableBody,
@@ -18,14 +22,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+
 import { projects } from "@/lib/data-project"
 import { useProjectTableColumns } from "./project-table-columns"
 import { useEffect, useMemo, useState } from "react"
-import {
-  getFacetedMinMaxValues,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
-} from "@tanstack/react-table"
 import { BlogTableSkeleton } from "@/app/blog/_components/blog-table-skeleton"
 
 export function ProjectTable() {
@@ -41,7 +41,10 @@ export function ProjectTable() {
 
   const columns = useProjectTableColumns()
   const data = useMemo(
-    () => projects.sort((a, b) => (a.slug > b.slug ? 1 : -1)),
+    () =>
+      projects
+        .filter((p) => !p.isPrivate)
+        .sort((a, b) => (a.slug > b.slug ? 1 : -1)),
     []
   )
 
@@ -60,7 +63,6 @@ export function ProjectTable() {
     getPaginationRowModel: getPaginationRowModel(),
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
-    getFacetedMinMaxValues: getFacetedMinMaxValues(),
   })
 
   if (!isMounted) {

@@ -173,3 +173,11 @@ export const projects: Project[] = [
     status: "completed",
   },
 ]
+
+export function getProjectData(slug: string) {
+  const project = projects.find((p) => p.slug === slug && !p.isPrivate)
+  if (!project) {
+    throw new Error(`Project with slug "${slug}" not found.`)
+  }
+  return project
+}

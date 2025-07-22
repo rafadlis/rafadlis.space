@@ -17,7 +17,7 @@ import {
 
 import { projects } from "@/lib/data-project"
 import { columns } from "./project-table-columns"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { ProjectTableSkeleton } from "./project-table-skeleton"
 
 export function ProjectTable() {
@@ -27,8 +27,10 @@ export function ProjectTable() {
     setIsMounted(true)
   }, [])
 
+  const filteredProjects = projects.filter((p) => !p.isPrivate)
+
   const table = useReactTable({
-    data: projects,
+    data: filteredProjects,
     columns,
     getCoreRowModel: getCoreRowModel(),
   })

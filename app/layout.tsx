@@ -42,9 +42,11 @@ const siteConfig = {
   keywords: [
     "Rafadlis",
     "R. Rahmat Fadli Sadikin",
+    "rafadlis space",
     "Software Engineer",
     "UX Designer",
     "Web Developer",
+    "Web App Developer",
     "Next.js",
     "React",
     "TypeScript",
