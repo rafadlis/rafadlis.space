@@ -5,7 +5,7 @@ import { blogs } from "@/lib/data-blog"
 export const runtime = "edge"
 
 // Image metadata
-export const alt = "Project by Rafadlis"
+export const alt = "Blog Post by Rafadlis"
 export const size = {
   width: 1200,
   height: 630,
