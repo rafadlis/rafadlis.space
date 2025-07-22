@@ -38,14 +38,18 @@ export default async function Image({ params }: { params: { slug: string } }) {
     (blog) => blog.slug === slug && blog.status === "published"
   )
 
+  if (!selectedBlog) {
+    // Option 1: Throw error (consistent with getProjectData)
+    throw new Error(`Blog post with slug "${slug}" not found.`)
+  }
+
   const title =
-    selectedBlog?.title && selectedBlog?.title.length > 32
-      ? selectedBlog?.title.slice(0, 32) + "..."
-      : selectedBlog?.title
+    selectedBlog.title && selectedBlog.title.length > 32
+      ? selectedBlog.title.slice(0, 32) + "..."
+      : selectedBlog.title
 
   const datePublished =
-    selectedBlog?.publishedAt &&
-    format(selectedBlog?.publishedAt, "MMM d, yyyy")
+    selectedBlog.publishedAt && format(selectedBlog.publishedAt, "MMM d, yyyy")
 
   return new ImageResponse(
     (
