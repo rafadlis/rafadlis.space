@@ -13,7 +13,9 @@ export async function generateMetadata({ params }: PageProps) {
   if (
     !project ||
     project.isPrivate ||
-    (project.status !== "completed" && project.status !== "in-progress")
+    (project.status !== "completed" &&
+      project.status !== "in-progress" &&
+      project.status !== "growing")
   ) {
     return {}
   }
@@ -33,7 +35,9 @@ export default async function Page({ params }: PageProps) {
   if (
     !project ||
     project.isPrivate ||
-    (project.status !== "completed" && project.status !== "in-progress")
+    (project.status !== "completed" &&
+      project.status !== "in-progress" &&
+      project.status !== "growing")
   ) {
     notFound()
   }
@@ -51,7 +55,9 @@ export function generateStaticParams() {
     .filter(
       (project) =>
         !project.isPrivate &&
-        (project.status === "completed" || project.status === "in-progress")
+        (project.status === "completed" ||
+          project.status === "in-progress" ||
+          project.status === "growing")
     )
     .map((project) => ({
       slug: project.slug,
