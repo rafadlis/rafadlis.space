@@ -34,7 +34,9 @@ export default async function Image({ params }: { params: { slug: string } }) {
   const whiteColor = "#fafafa"
   const blackColor = "#09090b"
 
-  const selectedBlog = blogs.find((blog) => blog.slug === slug)
+  const selectedBlog = blogs.find(
+    (blog) => blog.slug === slug && blog.status === "published"
+  )
 
   const title =
     selectedBlog?.title && selectedBlog?.title.length > 32

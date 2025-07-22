@@ -51,10 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Project pages
   const projectPages: MetadataRoute.Sitemap = projects
-    .filter(
-      (project) =>
-        project.status === "completed" || project.status === "in-progress"
-    )
+    .filter((project) => !project.isPrivate)
     .map((project) => ({
       url: `${baseUrl}/project/${project.slug}`,
       lastModified: new Date(),

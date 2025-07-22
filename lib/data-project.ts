@@ -175,7 +175,7 @@ export const projects: Project[] = [
 ]
 
 export function getProjectData(slug: string) {
-  const project = projects.find((p) => p.slug === slug)
+  const project = projects.find((p) => p.slug === slug && !p.isPrivate)
   if (!project) {
     throw new Error(`Project with slug "${slug}" not found.`)
   }
