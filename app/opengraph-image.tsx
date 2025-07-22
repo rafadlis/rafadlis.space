@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og"
 export const runtime = "edge"
 
 // Image metadata
-export const alt = "Blog Post by Rafadlis"
+export const alt = "Rafadlis Space - Portfolio & Blog"
 export const size = {
   width: 1200,
   height: 630,
