@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og"
-import { readFile } from "node:fs/promises"
-import { join } from "node:path"
+
+export const runtime = "edge"
 
 // Image metadata
 export const alt = "Project by Rafadlis"
@@ -13,13 +13,19 @@ export const contentType = "image/png"
 
 // Image generation
 export default async function Image() {
-  // Font loading, process.cwd() is Next.js project directory
-  const robotoRegular = await readFile(
-    join(process.cwd(), "assets/Roboto-Regular.ttf")
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  // Font
+  const robotoRegular = fetch(`${siteUrl}/Roboto-Regular.ttf`).then((res) =>
+    res.arrayBuffer()
   )
-  const robotoBold = await readFile(
-    join(process.cwd(), "assets/Roboto-Bold.ttf")
+  const robotoBold = fetch(`${siteUrl}/Roboto-Bold.ttf`).then((res) =>
+    res.arrayBuffer()
   )
+
+  const [robotoRegularData, robotoBoldData] = await Promise.all([
+    robotoRegular,
+    robotoBold,
+  ])
 
   const whiteColor = "#fafafa"
   const blackColor = "#09090b"
@@ -55,12 +61,12 @@ export default async function Image() {
           >
             r.
           </div>
-          <div style={{ fontSize: 128, fontWeight: 700, color: blackColor }}>
+          {/* <div style={{ fontSize: 128, fontWeight: 700, color: blackColor }}>
             Project by Rafadlis
           </div>
           <div style={{ fontSize: 24, fontWeight: 400, color: blackColor }}>
             https://rafadlis.space/project
-          </div>
+          </div> */}
         </div>
       </div>
     ),
@@ -72,13 +78,13 @@ export default async function Image() {
       fonts: [
         {
           name: "Roboto",
-          data: robotoRegular,
+          data: robotoRegularData,
           style: "normal",
           weight: 400,
         },
         {
           name: "Roboto",
-          data: robotoBold,
+          data: robotoBoldData,
           style: "normal",
           weight: 700,
         },
