@@ -90,7 +90,10 @@ export default function HRMS() {
               aria-hidden="true"
               className="text-sm font-light text-muted-foreground/50"
             >
-              by rafadlis.space
+              by{" "}
+              <Link href="https://rafadlis.space" target="_blank">
+                rafadlis.space
+              </Link>
             </span>
           </h1>
           <p className="text-lg text-muted-foreground mt-2">
