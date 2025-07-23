@@ -19,11 +19,16 @@ import {
   ChalkboardTeacherIcon,
   ClockIcon,
   Question,
+  EnvelopeIcon,
+  WhatsappLogoIcon,
+  PhoneIcon,
+  InstagramLogoIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import type { Metadata } from "next"
 import Image from "next/image"
 import { LogoIcon } from "./_components/tirta-kencana-logo"
 import { TermsAndConditions } from "./_components/terms-and-conditions"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Hotel & Resort Management System",
@@ -972,6 +977,50 @@ export default function HRMS() {
           </div>
         </section>
         <TermsAndConditions />
+        <section>
+          <h2 className="text-2xl font-extrabold mb-6">Kontak</h2>
+          <p className="text-justify mb-6 mt-2">
+            Kami siap membantu Anda dalam mengembangkan sistem HRMS yang sesuai
+            dengan kebutuhan hotel Anda. Silakan hubungi kami melalui informasi
+            di bawah ini.
+          </p>
+          <div className="flex flex-row gap-8 flex-wrap">
+            <div className="relative flex flex-row gap-2 items-center group">
+              <div className="shrink-0 bg-muted rounded-md border size-8 flex items-center justify-center group-hover:bg-muted-foreground/10 transition-colors">
+                <EnvelopeIcon />
+              </div>
+              <span>me@rafadlis.space</span>
+              <Link
+                href="mailto:me@rafadlis.space"
+                className="absolute inset-0 z-10"
+                target="_blank"
+              />
+            </div>
+            <div className="relative flex flex-row gap-2 items-center group">
+              <div className="shrink-0 bg-muted rounded-md border h-8 px-2 flex items-center justify-center gap-2">
+                <WhatsappLogoIcon />
+                <PhoneIcon />
+              </div>
+              <span>628998001772</span>
+              <Link
+                href="https://wa.me/628998001772"
+                className="absolute inset-0 z-10"
+                target="_blank"
+              />
+            </div>
+            <div className="relative flex flex-row gap-2 items-center group">
+              <div className="shrink-0 bg-muted rounded-md border h-8 px-2 flex items-center justify-center gap-2">
+                <InstagramLogoIcon />
+              </div>
+              <span>@rafadlis.space</span>
+              <Link
+                href="https://www.instagram.com/rafadlis.space"
+                className="absolute inset-0 z-10"
+                target="_blank"
+              />
+            </div>
+          </div>
+        </section>
       </article>
     </main>
   )
