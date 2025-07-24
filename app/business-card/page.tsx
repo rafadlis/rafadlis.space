@@ -30,9 +30,9 @@ export default function BusinessCard() {
           onClick={handlePrintFront}
           className="absolute -bottom-18 print:hidden max-md:hidden gap-2"
           variant={"default"}
+          size={"icon"}
         >
           <Printer className="size-4" />
-          Print
         </Button>
       </div>
       <div
@@ -56,9 +56,9 @@ export default function BusinessCard() {
           onClick={handlePrintBack}
           className="absolute -bottom-18 justify-self-center print:hidden max-md:hidden gap-2"
           variant={"default"}
+          size={"icon"}
         >
           <Printer className="size-4" />
-          Print
         </Button>
       </div>
     </article>
