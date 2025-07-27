@@ -115,7 +115,7 @@ function FeatureSlide({ pageNumber }: { pageNumber: number }) {
           <FeatureCard
             icon={InvoiceIcon}
             title="Biaya Transparan"
-            description="Hanya 10% dari total biaya pengembangan, dan tidak ada biaya tersembunyi"
+            description="Biaya yang tertera adalah biaya yang Anda bayar, dan tidak ada biaya tersembunyi"
           />
         </div>
       </SlideContent>
