@@ -316,6 +316,8 @@ export default function HRMS() {
             benar-benar digunakan.
           </p>
 
+          {/* TODO: add pricing for demo with certain price that payed per month */}
+
           <div className="flex flex-col gap-4 sm:gap-6">
             <div className="mt-6 sm:mt-8">
               <h3 className="font-semibold mb-2 sm:mb-3">
