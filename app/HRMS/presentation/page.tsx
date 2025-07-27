@@ -8,8 +8,11 @@ import { Logo } from "@/components/logo"
 import "./page.css"
 import {
   BinocularsIcon,
+  ChalkboardTeacherIcon,
   ChatsIcon,
+  ClockIcon,
   FastForwardIcon,
+  GearIcon,
   InvoiceIcon,
   LightningIcon,
   ListChecksIcon,
@@ -328,6 +331,44 @@ function Slide4() {
               </TableRow>
             </TableBody>
           </Table>
+        </div>
+        <div className="flex flex-row gap-3 sm:gap-4 mt-4 sm:mt-6">
+          <div className="border rounded-lg p-3 sm:p-4 flex flex-row gap-3 items-center">
+            <GearIcon
+              className="size-6 text-muted-foreground shrink-0"
+              weight="fill"
+            />
+            <div>
+              <h3>Tidak Mengganggu Operasional</h3>
+              <p className="text-sm text-muted-foreground">
+                Implementasi bertahap tanpa menghentikan aktivitas hotel
+              </p>
+            </div>
+          </div>
+          <div className="border rounded-lg p-3 sm:p-4 flex flex-row gap-3 items-center">
+            <ChalkboardTeacherIcon
+              className="size-6 text-muted-foreground shrink-0"
+              weight="fill"
+            />
+            <div>
+              <h3>Pelatihan Komprehensif</h3>
+              <p className="text-sm text-muted-foreground">
+                mendampingi hingga seluruh staff mahir menggunakan sistem
+              </p>
+            </div>
+          </div>
+          <div className="border rounded-lg p-3 sm:p-4 flex flex-row gap-3 items-center">
+            <ClockIcon
+              className="size-6 text-muted-foreground shrink-0"
+              weight="fill"
+            />
+            <div>
+              <h3>Support 24/7</h3>
+              <p className="text-sm text-muted-foreground">
+                Bantuan teknis dan konsultasi tersedia kapan saja
+              </p>
+            </div>
+          </div>
         </div>
       </SlideContent>
     </Slide>
