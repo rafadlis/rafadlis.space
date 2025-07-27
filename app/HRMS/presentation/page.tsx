@@ -23,7 +23,15 @@ import {
 } from "@phosphor-icons/react/dist/ssr"
 import { LogoIcon } from "../_components/tirta-kencana-logo"
 import Image from "next/image"
-import { Table, TableRow, TableBody, TableCell } from "@/components/ui/table"
+import {
+  Table,
+  TableRow,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHead,
+  TableCaption,
+} from "@/components/ui/table"
 import { cn } from "@/lib/utils"
 
 function CommonFooter({ pageNumber }: { pageNumber?: number }) {
@@ -376,12 +384,379 @@ function MethodologySlide({ pageNumber }: { pageNumber: number }) {
   )
 }
 
+function BasicPricingSlide({ pageNumber }: { pageNumber: number }) {
+  return (
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
+      <SlideContent className="flex flex-col gap-6">
+        <SlideHeading1>Harga Tawaran Dasar</SlideHeading1>
+        <div className="flex flex-row gap-3 sm:gap-4">
+          <p className="text-justify text-muted-foreground">
+            Harga fleksibel disesuaikan dengan kebutuhan hotel Anda. Sistem
+            menggunakan metode add-on sehingga Anda hanya membayar fitur yang
+            benar-benar digunakan. Harga add-on dapat disesuaikan dan masih
+            dapat didiskusikan berdasarkan kebutuhan spesifik hotel Anda. Add-on
+            dapat dibeli kapan saja setelah implementasi sistem utama, tidak ada
+            batasan waktu.
+          </p>
+        </div>
+        <div className="border rounded-lg">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-1/3 text-muted-foreground min-w-[120px]">
+                  Module
+                </TableHead>
+                <TableHead className="w-1/2 text-muted-foreground min-w-[180px]">
+                  Description
+                </TableHead>
+                <TableHead className="w-1/6 text-right text-muted-foreground min-w-[80px]">
+                  Price (Rp)*
+                </TableHead>
+                <TableHead className="w-1/6 text-muted-foreground min-w-[70px]">
+                  Payment
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Front Office Management
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Check-in/out tamu, reservasi kamar, penugasan kamar
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  ~
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Housekeeping System
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Tracking status kamar, jadwal cleaning, maintenance
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  ~
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Back Office Operations
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Manajemen staff, penjadwalan shift, laporan
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  ~
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Financial Management
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Billing, invoicing, proses pembayaran
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  ~
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Training Pegawai
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Pelatihan langsung di hotel sambil bekerja selama 3 bulan
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  ~
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow className="bg-muted/20">
+                <TableCell className="font-bold whitespace-normal">
+                  Total Biaya Software
+                </TableCell>
+                <TableCell className="font-medium whitespace-normal">
+                  Belum termasuk server & hosting
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  30,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x Bayar
+                </TableCell>
+              </TableRow>
+            </TableBody>
+            <TableCaption>
+              *Harga flexible, masih bisa di diskusikan
+            </TableCaption>
+          </Table>
+        </div>
+      </SlideContent>
+    </Slide>
+  )
+}
+
+function ServerPricingSlide({ pageNumber }: { pageNumber: number }) {
+  return (
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
+      <SlideContent className="flex flex-col gap-6">
+        <SlideHeading1>Harga Server & Hosting</SlideHeading1>
+        <p className="mb-4 text-justify text-muted-foreground">
+          Server bersifat opsional namun sangat direkomendasikan agar aplikasi
+          dapat diakses secara online. Kami menyediakan pilihan server cloud
+          dengan performa handal yang dapat disesuaikan dengan skala operasional
+          hotel Anda. Klien juga memiliki fleksibilitas untuk menggunakan server
+          pribadi jika diinginkan.
+        </p>
+        <div className="border rounded-lg">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[150px] text-muted-foreground">
+                  Paket
+                </TableHead>
+                <TableHead className="text-muted-foreground">
+                  Spesifikasi
+                </TableHead>
+                <TableHead className="text-right text-muted-foreground">
+                  Harga (Rp)*
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell className="font-medium">Light</TableCell>
+                <TableCell className="whitespace-normal text-muted-foreground">
+                  untuk aplikasi yang ringan dan sederhana, fitur yang
+                  minimalis, khusus internal hotel
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  2,000,000
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Standard</TableCell>
+                <TableCell className="whitespace-normal text-muted-foreground">
+                  cocok untuk skala hotel pada umumnya, ada real-time update
+                  data, fitur yang lengkap, reservasi online, dan lainnya.
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  3,000,000
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Premium</TableCell>
+                <TableCell className="whitespace-normal text-muted-foreground">
+                  Cocok untuk hotel yang memerlukan monitoring tingkat tinggi
+                  dan pengguna aplikasi diatas 50 orang
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  4,200,000
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">Enterprise</TableCell>
+                <TableCell className="whitespace-normal text-muted-foreground">
+                  Spek yang sangat tinggi untuk sebuah hotel, hampir bisa
+                  melakukan semua hal mengenai hotel dan resort
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  8,000,000
+                </TableCell>
+              </TableRow>
+            </TableBody>
+            <TableCaption>
+              *Harga untuk perpanjangan tahunan. Spesifikasi dapat disesuaikan.
+            </TableCaption>
+          </Table>
+        </div>
+      </SlideContent>
+    </Slide>
+  )
+}
+
+function AddOnPricingSlide({ pageNumber }: { pageNumber: number }) {
+  return (
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
+      <SlideContent className="flex flex-col gap-2">
+        <SlideHeading1>Harga Add-On</SlideHeading1>
+        <p className="text-muted-foreground">
+          Harga add-on dapat disesuaikan dan masih dapat didiskusikan
+          berdasarkan kebutuhan spesifik hotel Anda. Add-on dapat dibeli kapan
+          saja setelah implementasi sistem utama, tidak ada batasan waktu.
+        </p>
+        <div className="border rounded-lg">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-1/3 text-muted-foreground min-w-[120px]">
+                  Module
+                </TableHead>
+                <TableHead className="w-1/2 text-muted-foreground min-w-[180px]">
+                  Description
+                </TableHead>
+                <TableHead className="w-1/6 text-right text-muted-foreground min-w-[80px]">
+                  Price (Rp)*
+                </TableHead>
+                <TableHead className="w-1/6 text-muted-foreground min-w-[70px]">
+                  Payment
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Restaurant POS
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Manajemen F&B, kontrol menu, pesanan dapur
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  8,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Guest App
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Layanan online tamu untuk Booking, permintaan concierge, dan
+                  pesan F&B
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  12,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Payment Gateway
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Pembayaran lewat QRIS, GOPAY, Visa, Mastercard, Virtual
+                  Account, dan lainnya
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  9,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Advanced Analytics & BI
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Analisis revenue, forecasting okupansi, business insights
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  10,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="whitespace-normal font-medium">
+                  WhatsApp Notif
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Notifikasi otomatis melalui WhatsApp ke tamu dan pegawai
+                  seperti notif kamar vacant ke Housekeeping
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  **1,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  / 1,000 notif
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Spa & Wellness Management
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Booking treatment, jadwal therapist, inventory
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  6,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Event & Conference Management
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Booking ruang meeting, manajemen equipment, catering
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  7,000,000
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium whitespace-normal">
+                  Penyerahan Source Code
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Penyerahan seluruh kode sumber aplikasi untuk dikelola secara
+                  mandiri oleh Klien.
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  Kesepakatan
+                </TableCell>
+                <TableCell className="text-right whitespace-nowrap font-mono">
+                  1x
+                </TableCell>
+              </TableRow>
+            </TableBody>
+            <TableCaption>
+              *Harga tidak baku, masih bisa di diskusikan, **Harga tergantung
+              dari Meta (Facebook) dan kurs USD
+            </TableCaption>
+          </Table>
+        </div>
+      </SlideContent>
+    </Slide>
+  )
+}
 export default function HRMSPresentation() {
   const orderedSlides = [
     TitleSlide,
     FeatureSlide,
     GallerySlide,
     MethodologySlide,
+    BasicPricingSlide,
+    ServerPricingSlide,
+    AddOnPricingSlide,
   ]
   return (
     <SlidesWrapper>
