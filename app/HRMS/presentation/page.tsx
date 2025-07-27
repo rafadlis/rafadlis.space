@@ -11,15 +11,19 @@ import {
   ChalkboardTeacherIcon,
   ChatsIcon,
   ClockIcon,
+  FacebookLogoIcon,
   FastForwardIcon,
   GearIcon,
+  InstagramLogoIcon,
   InvoiceIcon,
   LightningIcon,
   ListChecksIcon,
   PencilRulerIcon,
+  PhoneIcon,
   PiggyBankIcon,
   ReceiptIcon,
   UserCircleGearIcon,
+  WhatsappLogoIcon,
 } from "@phosphor-icons/react/dist/ssr"
 import { LogoIcon } from "../_components/tirta-kencana-logo"
 import Image from "next/image"
@@ -33,6 +37,7 @@ import {
   TableCaption,
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 function CommonFooter({ pageNumber }: { pageNumber?: number }) {
   return (
@@ -748,6 +753,62 @@ function AddOnPricingSlide({ pageNumber }: { pageNumber: number }) {
     </Slide>
   )
 }
+
+function ContactSlide({ pageNumber }: { pageNumber: number }) {
+  return (
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
+      <SlideContent className="flex flex-col gap-2">
+        <div className="flex-1 flex flex-col justify-center items-center">
+          <h2 className="text-6xl font-black">
+            Sistem aplikasi milik{" "}
+            <span className="line-through italic">Kami</span> Anda
+            <span className="text-primary">.</span>
+          </h2>
+        </div>
+        <div className="w-sm self-end">
+          <Table>
+            <TableBody>
+              <TableRow>
+                <TableCell>Email</TableCell>
+                <TableCell>me@rafadlis.space</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="flex flex-row gap-2">
+                  <WhatsappLogoIcon className="size-4" weight="fill" />{" "}
+                  <PhoneIcon className="size-4" weight="fill" />
+                </TableCell>
+                <TableCell>+62 899 8001 772</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="flex flex-row gap-2">
+                  <InstagramLogoIcon weight="fill" className="size-4" />
+                  <FacebookLogoIcon weight="fill" className="size-4" />
+                </TableCell>
+                <TableCell>
+                  <Link
+                    href="https://www.instagram.com/rafadlis.space"
+                    target="_blank"
+                  >
+                    @rafadlis.space
+                  </Link>
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Website</TableCell>
+                <TableCell>
+                  <Link href="https://rafadlis.space" target="_blank">
+                    https://rafadlis.space
+                  </Link>
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </div>
+      </SlideContent>
+    </Slide>
+  )
+}
+
 export default function HRMSPresentation() {
   const orderedSlides = [
     TitleSlide,
@@ -757,6 +818,7 @@ export default function HRMSPresentation() {
     BasicPricingSlide,
     ServerPricingSlide,
     AddOnPricingSlide,
+    ContactSlide,
   ]
   return (
     <SlidesWrapper>
