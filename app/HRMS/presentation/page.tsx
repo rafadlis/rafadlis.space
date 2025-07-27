@@ -39,9 +39,9 @@ function CommonFooter({ pageNumber }: { pageNumber?: number }) {
   )
 }
 
-function Slide1() {
+function TitleSlide({ pageNumber }: { pageNumber: number }) {
   return (
-    <Slide footer={<CommonFooter pageNumber={1} />}>
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
       <SlideContent className="flex flex-col justify-center gap-4">
         <p className="text-lg">
           Solusi Khusus untuk manajemen Hotel & Resort Anda
@@ -54,7 +54,7 @@ function Slide1() {
   )
 }
 
-function Slide2() {
+function FeatureSlide({ pageNumber }: { pageNumber: number }) {
   // Reusable FeatureCard component within Slide2 scope
   function FeatureCard({
     icon: Icon,
@@ -75,7 +75,7 @@ function Slide2() {
   }
 
   return (
-    <Slide footer={<CommonFooter pageNumber={2} />}>
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
       <SlideContent className="flex flex-col gap-8">
         <SlideHeading1>Perbedaan HRMS dengan yang lain</SlideHeading1>
         <div className="flex flex-wrap justify-center items-center gap-6">
@@ -110,7 +110,7 @@ function Slide2() {
   )
 }
 
-function Slide3() {
+function GallerySlide({ pageNumber }: { pageNumber: number }) {
   const galleryImages = [
     {
       src: "/app-tirtakencana/01-front-office-main-page.png",
@@ -150,7 +150,7 @@ function Slide3() {
     },
   ]
   return (
-    <Slide footer={<CommonFooter pageNumber={3} />}>
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
       <SlideContent className="flex flex-col gap-6">
         <SlideHeading1>Trusted By</SlideHeading1>
         <div className="flex flex-row gap-6">
@@ -196,9 +196,9 @@ function Slide3() {
   )
 }
 
-function Slide4() {
+function MethodologySlide({ pageNumber }: { pageNumber: number }) {
   return (
-    <Slide footer={<CommonFooter pageNumber={4} />}>
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
       <SlideContent className="flex flex-col gap-6">
         <SlideHeading1>Metodologi Kerja & Strategis</SlideHeading1>
         <div className="border rounded-lg">
@@ -377,12 +377,17 @@ function Slide4() {
 }
 
 export default function HRMSPresentation() {
+  const orderedSlides = [
+    TitleSlide,
+    FeatureSlide,
+    GallerySlide,
+    MethodologySlide,
+  ]
   return (
     <SlidesWrapper>
-      <Slide1 />
-      <Slide2 />
-      <Slide3 />
-      <Slide4 />
+      {orderedSlides.map((Slide, index) => (
+        <Slide key={index} pageNumber={index + 1} />
+      ))}
     </SlidesWrapper>
   )
 }
