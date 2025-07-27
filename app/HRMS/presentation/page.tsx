@@ -26,7 +26,7 @@ import Image from "next/image"
 import { Table, TableRow, TableBody, TableCell } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
 
-function CommonFooter() {
+function CommonFooter({ pageNumber }: { pageNumber?: number }) {
   return (
     <div className="flex items-center gap-3">
       <Logo />
@@ -34,13 +34,14 @@ function CommonFooter() {
         <span className="font-black">HRMS</span>{" "}
         <span className="text-xs">by Rafadlis Space</span>
       </p>
+      <span className="text-sm ml-auto">{pageNumber}</span>
     </div>
   )
 }
 
 function Slide1() {
   return (
-    <Slide footer={<CommonFooter />}>
+    <Slide footer={<CommonFooter pageNumber={1} />}>
       <SlideContent className="flex flex-col justify-center gap-4">
         <p className="text-lg">
           Solusi Khusus untuk manajemen Hotel & Resort Anda
@@ -74,7 +75,7 @@ function Slide2() {
   }
 
   return (
-    <Slide footer={<CommonFooter />}>
+    <Slide footer={<CommonFooter pageNumber={2} />}>
       <SlideContent className="flex flex-col gap-8">
         <SlideHeading1>Perbedaan HRMS dengan yang lain</SlideHeading1>
         <div className="flex flex-wrap justify-center items-center gap-6">
@@ -149,7 +150,7 @@ function Slide3() {
     },
   ]
   return (
-    <Slide footer={<CommonFooter />}>
+    <Slide footer={<CommonFooter pageNumber={3} />}>
       <SlideContent className="flex flex-col gap-6">
         <SlideHeading1>Trusted By</SlideHeading1>
         <div className="flex flex-row gap-6">
@@ -197,7 +198,7 @@ function Slide3() {
 
 function Slide4() {
   return (
-    <Slide footer={<CommonFooter />}>
+    <Slide footer={<CommonFooter pageNumber={4} />}>
       <SlideContent className="flex flex-col gap-6">
         <SlideHeading1>Metodologi Kerja & Strategis</SlideHeading1>
         <div className="border rounded-lg">
