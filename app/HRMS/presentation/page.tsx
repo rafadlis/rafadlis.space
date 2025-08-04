@@ -35,6 +35,7 @@ import {
   TableHeader,
   TableHead,
   TableCaption,
+  TableFooter,
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
@@ -389,6 +390,69 @@ function MethodologySlide({ pageNumber }: { pageNumber: number }) {
   )
 }
 
+function DemoPricingSlide({ pageNumber }: { pageNumber: number }) {
+  return (
+    <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
+      <SlideContent className="flex flex-col gap-6">
+        <SlideHeading1>Demo & Uji Coba</SlideHeading1>
+        <p className="mb-4 text-justify text-muted-foreground">
+          Kami menyediakan opsi demo agar Anda dapat mencoba dan merasakan
+          langsung bagaimana sistem kami bekerja. Dengan biaya yang sangat
+          terjangkau, Anda bisa mendapatkan akses penuh ke fitur-fitur dasar
+          untuk periode satu bulan.
+        </p>
+        <div className="border rounded-lg">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="text-muted-foreground">Paket</TableHead>
+                <TableHead className="text-muted-foreground">
+                  Deskripsi
+                </TableHead>
+                <TableHead className="text-right text-muted-foreground">
+                  Harga (Rp)
+                </TableHead>
+                <TableHead className="text-muted-foreground">
+                  Pembayaran
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell className="font-medium">Demo</TableCell>
+                <TableCell className="whitespace-normal">
+                  Akses penuh ke semua fitur dasar selama 1 bulan, termasuk
+                  support jarak jauh.
+                </TableCell>
+                <TableCell className="text-right font-mono">200,000</TableCell>
+                <TableCell>/Bulan</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">
+                  Demo + Pendampingan
+                </TableCell>
+                <TableCell className="whitespace-normal">
+                  Akses penuh ke semua fitur dasar selama 1 bulan sekaligus di
+                  dampingi.
+                </TableCell>
+                <TableCell className="text-right font-mono">300,000</TableCell>
+                <TableCell>/Bulan</TableCell>
+              </TableRow>
+            </TableBody>
+            <TableCaption>
+              <p className="text-left px-2">
+                Semua harga yang tercantum dapat dinegosiasikan lebih lanjut
+                untuk memastikan solusi yang kami tawarkan sesuai dengan
+                anggaran dan kebutuhan spesifik Anda.
+              </p>
+            </TableCaption>
+          </Table>
+        </div>
+      </SlideContent>
+    </Slide>
+  )
+}
+
 function BasicPricingSlide({ pageNumber }: { pageNumber: number }) {
   return (
     <Slide footer={<CommonFooter pageNumber={pageNumber} />}>
@@ -401,7 +465,9 @@ function BasicPricingSlide({ pageNumber }: { pageNumber: number }) {
             benar-benar digunakan. Harga add-on dapat disesuaikan dan masih
             dapat didiskusikan berdasarkan kebutuhan spesifik hotel Anda. Add-on
             dapat dibeli kapan saja setelah implementasi sistem utama, tidak ada
-            batasan waktu.
+            batasan waktu. Semua harga yang tercantum dapat dinegosiasikan lebih
+            lanjut untuk memastikan solusi yang kami tawarkan sesuai dengan
+            anggaran dan kebutuhan spesifik Anda.
           </p>
         </div>
         <div className="border rounded-lg">
@@ -815,6 +881,7 @@ export default function HRMSPresentation() {
     FeatureSlide,
     GallerySlide,
     MethodologySlide,
+    DemoPricingSlide,
     BasicPricingSlide,
     ServerPricingSlide,
     AddOnPricingSlide,

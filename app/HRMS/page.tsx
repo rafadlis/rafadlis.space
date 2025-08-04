@@ -316,9 +316,63 @@ export default function HRMS() {
             benar-benar digunakan.
           </p>
 
-          {/* TODO: add pricing for demo with certain price that payed per month */}
-
           <div className="flex flex-col gap-4 sm:gap-6">
+            <div className="mt-4 sm:mt-6">
+              <h3 className="font-semibold mb-2 sm:mb-3">Demo & Uji Coba</h3>
+              <div className="border rounded-lg overflow-hidden">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="text-muted-foreground">
+                        Paket
+                      </TableHead>
+                      <TableHead className="text-muted-foreground">
+                        Deskripsi
+                      </TableHead>
+                      <TableHead className="text-right text-muted-foreground">
+                        Harga (Rp)
+                      </TableHead>
+                      <TableHead className="text-muted-foreground">
+                        Pembayaran
+                      </TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">Demo</TableCell>
+                      <TableCell className="whitespace-normal">
+                        Akses penuh ke semua fitur dasar selama 1 bulan,
+                        termasuk support jarak jauh.
+                      </TableCell>
+                      <TableCell className="text-right font-mono">
+                        200,000
+                      </TableCell>
+                      <TableCell>/Bulan</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">
+                        Demo + Pendampingan
+                      </TableCell>
+                      <TableCell className="whitespace-normal">
+                        Akses penuh ke semua fitur dasar selama 1 bulan
+                        sekaligus di dampingi.
+                      </TableCell>
+                      <TableCell className="text-right font-mono">
+                        300,000
+                      </TableCell>
+                      <TableCell>/Bulan</TableCell>
+                    </TableRow>
+                  </TableBody>
+                  <TableCaption>
+                    <p className="text-left px-2">
+                      Semua harga yang tercantum dapat dinegosiasikan lebih
+                      lanjut untuk memastikan solusi yang kami tawarkan sesuai
+                      dengan anggaran dan kebutuhan spesifik Anda.
+                    </p>
+                  </TableCaption>
+                </Table>
+              </div>
+            </div>
             <div className="mt-6 sm:mt-8">
               <h3 className="font-semibold mb-2 sm:mb-3">
                 Harga Tawaran Dasar
@@ -884,15 +938,18 @@ export default function HRMS() {
                 <p className="mt-2 text-muted-foreground text-justify">
                   Kami tidak menjual produk jadi (off-the-shelf). Apa yang kami
                   tawarkan adalah{" "}
-                  <strong>kerangka kerja (framework) yang fleksibel</strong> dan
-                  layanan pengembangan khusus. Proses kami dimulai dengan
-                  wawancara mendalam untuk memahami SOP dan
-                  &ldquo;keunikan&rdquo; hotel Anda. Sebagai contoh, jika Anda
-                  memiliki paket spa khusus yang terintegrasi dengan reservasi
-                  kamar, atau sistem poin loyalitas yang unik, kami akan
-                  membangun fitur tersebut dari awal agar sesuai persis dengan
-                  kebutuhan Anda. Anda tidak membayar untuk template, Anda
-                  berinvestasi dalam solusi yang dibuat khusus.
+                  <strong>kerangka kerja (framework) yang fleksibel</strong>{" "}
+                  yang telah teruji dan dikembangkan berdasarkan pengalaman
+                  dengan klien hotel sebelumnya. Ini bukan template, melainkan
+                  fondasi solid yang memungkinkan kami membangun solusi khusus
+                  dengan cepat dan andal. Proses kami dimulai dengan wawancara
+                  mendalam untuk memahami SOP dan &ldquo;keunikan&rdquo; hotel
+                  Anda. Sebagai contoh, jika Anda memiliki paket spa khusus yang
+                  terintegrasi dengan reservasi kamar, atau sistem poin
+                  loyalitas yang unik, kami akan membangun fitur tersebut dari
+                  awal agar sesuai persis dengan kebutuhan Anda. Anda tidak
+                  membayar untuk template, Anda berinvestasi dalam solusi yang
+                  dibuat khusus yang diperkuat oleh pengalaman kami.
                 </p>
               </div>
             </div>
