@@ -35,7 +35,6 @@ import {
   TableHeader,
   TableHead,
   TableCaption,
-  TableFooter,
 } from "@/components/ui/table"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
