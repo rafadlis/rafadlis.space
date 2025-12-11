@@ -28,7 +28,7 @@
     "date-fns": "^4.1.0",
     "framer-motion": "^12.18.1",
     "motion": "^12.18.1",
-    "next": "15.4.2-canary.14",
+    "next": "15.6.0-canary.58",
     "next-themes": "^0.3.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
