@@ -1,5 +1,5 @@
 {
-  "name": "Rafadlis | Crafter",
+  "name": "Rafadlis — Selected projects",
   "short_name": "Rafadlis",
   "icons": [
     {
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#edf3f8",
+  "background_color": "#edf3f8",
   "display": "standalone"
 }
