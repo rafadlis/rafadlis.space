@@ -1,0 +1,2 @@
+# Next.js rewrites this generated declaration during type generation.
+next-env.d.ts
